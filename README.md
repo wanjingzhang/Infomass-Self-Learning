@@ -1,2 +1,9 @@
 # Infomass-Self-Learning
-Daily work
+Daily work Library
+
+
+
+
+Finally
+----
+I hope my users will make valuable suggestions, thanks.

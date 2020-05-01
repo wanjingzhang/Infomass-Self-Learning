@@ -15,4 +15,11 @@
 .head{
     display: inline-block;
     background-color: white;
+    cursor: pointer;
+}
+
+.filter{
+    display: inline-block;
+    background-color: pink;
+    cursor: pointer;
 }
