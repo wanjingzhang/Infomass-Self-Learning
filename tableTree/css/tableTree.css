@@ -1,0 +1,18 @@
+@charset "utf-8";
+.tableTree{
+    width: 500px;
+}
+.filterC{
+    background-color: aquamarine;
+    min-height: 200px;
+}
+
+.tableH{
+    background-color: burlywood;
+    min-height: 200px;
+}
+
+.head{
+    display: inline-block;
+    background-color: white;
+}
