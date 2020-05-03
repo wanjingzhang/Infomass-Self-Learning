@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>拖拽库</title>
+<style type="text/css"> 
+</style> 
+</head>
+<body>
+    //css代码
+	<style>
+		#window{width:500px;height:500px;position: relative;border:1px dotted green;}
+		.son{width:100px;height:100px;background:red;position: absolute;}
+	</style>
+
+	//html代码
+	<div id="window">
+		<div class="son"></div>
+	</div>
+
+	//js代码
+	<script>
+		/*
+		 实现拖拽效果主要跟鼠标的三个事件有关：　　　　
+		　 onmousedown : 选择要拖拽的元素
+			onmousemove : 移动元素
+			onmouseup : 释放元素
+		 * */
+		var father=document.getElementById('box')
+		var son=document.querySelector('#window>.son');
+		son.onmousedown=function(event){
+			var e=event||window.event;
+			var x=e.clientX-this.offsetLeft;
+			var y=e.clientY-this.offsetTop;
+			
+			son.onmousemove=function(event){
+				var e=event||window.event;
+				var jlx=e.clientX-x;
+				var jly=e.clientY-y;
+				son.style.left=jlx+'px';
+				son.style.top=jly+'px';
+			}
+			son.onmouseup=function(){
+				son.onmousemove=null;
+			}
+		}
+	</script> 
+</body>
+</html>

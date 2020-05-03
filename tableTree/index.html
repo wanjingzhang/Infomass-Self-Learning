@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Table Group Tree</title>
-    <link rel="stylesheet" type="text/css" href="css/tableTree.css">
-    <script type="text/javascript" src="js/tableTree.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/tableTree.css"> 
 </head>
 
 <body>
     <div class="tableTree">
         <!-- 过滤容器 -->
-        <div class="filterC">
-            <div class="filter">Name</div> 
-            <div class="filter">Name</div> 
+        <div class="filterC" id="filterC">
+            <div class="filter" draggable="true" id="name1">Name1</div> 
+            <div class="filter" draggable="true" id="name2">Name2</div> 
         </div>
         <!-- 可拖动的表头 -->
-        <div class="tableH">
-            <div class="head">Age</div>
-            <div class="head">Gender</div>
+        <div class="tableH" id="tableH">
+            <div class="head" data-name="age" draggable="true" id="age">Age</div>
+            <div class="head" data-name="gender" draggable="true" id="gender">Gender</div>
         </div>
     </div>
+    <script type="text/javascript" src="js/tableTree.js"></script>
 </body>
 
 </html>

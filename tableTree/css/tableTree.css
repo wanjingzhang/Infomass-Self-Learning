@@ -12,14 +12,15 @@
     min-height: 200px;
 }
 
-.head{
+.filterC > div{
     display: inline-block;
     background-color: white;
     cursor: pointer;
 }
 
-.filter{
+.tableH > div{
     display: inline-block;
     background-color: pink;
     cursor: pointer;
+    margin: 2px 5px;
 }
