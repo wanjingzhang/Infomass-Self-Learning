@@ -11,6 +11,7 @@ When user drags the header of the table to the filter area:
 Steps:
 ----
 1. Create two different areas, one for the header of the table, and one for the container of the dragging elements.
+2. Achieve the head of table sort function. User can drag the corresponding element to the position who want.
 
 
 
