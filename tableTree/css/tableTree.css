@@ -18,6 +18,7 @@
     background-color: white;
     cursor: pointer;
     /* margin: 2px 5px; */
+    border: 1px solid #222;
     float: left;
 }
 
@@ -35,9 +36,10 @@
 #info {
     background:#eee;
     border: 1px solid #eee;
-    width:100px;
-    height:30px;
+    width: auto;
+    height: auto;
     position:absolute;
+    padding: 2px 5px;
     top:0;
     left:0;
     display:none;

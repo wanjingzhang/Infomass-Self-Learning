@@ -11,7 +11,7 @@ var tableTree = function(){
         // 初始化表头显示数据
         var str = "";
         for(var i in vTableData.tableHeader){
-            str += "<div id='" + vTableData.tableHeader[i] + "' data-name='"+ vTableData.tableHeader[i] +"' draggable='true' >" + i + "</div>"
+            str += "<div class='item' id='" + vTableData.tableHeader[i] + "' data-name='"+ vTableData.tableHeader[i] +"' draggable='true' >" + i + "</div>"
         }
         tableH.innerHTML = str;
         str = "";
@@ -23,131 +23,123 @@ var tableTree = function(){
             str += "</div>"
         }
         tableC.innerHTML = str;
-
-        // 初始化事件
-        for(var i in vTableData.tableHeader){
-            var header = document.getElementById(vTableData.tableHeader[i]);
-            /** 表头拖拽事件 */  
-            header.ondragstart = function(event){
-                var e = event || window.event;
-                e.dataTransfer.setData('text',e.target.id);
-                console.log("dragstart:" + e.target.id);
-            }
-            // header.ondragend = function(){
-            //     console.log("dragend");
-            // }
-    
-            // header.ondragenter = function(){
-            //     console.log("ondragenter");
-            // } 
-            // header.ondragleave = function(){
-            //     console.log("ondragleave");
-            // }
-            header.onmousedown = function(){
-                console.log("onmouseDown");
-                let startIndex = $(this).index();
-                let endIndex;
-                flag = true;
-                $('#info').css({
-                    display: 'block'
-                });
-                $('#info').html($(this).html());
-                $(document).mousemove(function(e) {
-                    if (flag) {
-                        var e = e || window.event;
-                        var x = e.clientX + 5 + 'px';
-                        var y = e.clientY + 5 + 'px';
-                        $('#info').css({
-                            left: x,
-                            top: y
-                        });
-                        if (e.preventDefault) {
-                            e.preventDefault();
-                        }
-                        return false;
-                    }
-                });
-                $('#tableH div').mouseenter(function() {
-                    endIndex = $(this).index();
-                    if (endIndex == startIndex) {
-                        $('#triangle').css('display', 'none');
-                    } else {
-                        $('#triangle').css('display', 'block');
-                    }
-                    var offsetW = 0;
-                    var preTd = $(this).prevAll();
-                    $.each(preTd, function(id, item) {
-                        offsetW += item.offsetWidth;
-                    })
-                    if (endIndex > startIndex) {
-                        offsetW += $(this)["0"].offsetWidth;
-                    }
-                    $('#triangle').css({
-                        'top': $(cFilter).height(),
-                        'left': offsetW + 4
-                    });
-                });
-                $(document).mouseup(function() {
-                    flag = false;
-                    $('#triangle').css('display', 'none');
+   
+        // 表头拖动事件
+        $('div.item').mousedown(function(){
+            console.log("onmouseDown");
+            let startIndex = $(this).index();
+            let endIndex;
+            // 鼠标拖动在表头上
+            flag = true;
+            $('#info').css({
+                display: 'block'
+            });
+            $('#info').html($(this).html());
+            $(document).mousemove(function(e) {
+                if (flag) {
+                    var e = e || window.event;
+                    var x = e.clientX + 5 + 'px';
+                    var y = e.clientY + 5 + 'px'; 
                     $('#info').css({
-                        display: 'none'
+                        left: x,
+                        top: y
                     });
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    }
+                    return false;
+                } 
+            });
+            // 拖动到表头div 即触发元素交换
+            $('#tableH div').mouseenter(function() {
+                endIndex = $(this).index();
+                if (endIndex == startIndex) {
+                    $('#triangle').css('display', 'none');
+                } else {
+                    $('#triangle').css('display', 'block');
+                }
+                var offsetW = 0;
+                var preTd = $(this).prevAll();
+                $.each(preTd, function(id, item) {
+                    offsetW += item.offsetWidth;
+                })
+                if (endIndex > startIndex) {
+                    offsetW += $(this)["0"].offsetWidth;
+                }
+                $('#triangle').css({
+                    'top': $(cFilter).height(),
+                    'left': offsetW + 4
+                });
+            });
+            // 交换元素
+            $(document).mouseup(function(e) {
+                flag = false; 
+                var e = e || window.event;
+                var x = e.clientX;
+                var y = e.clientY;  
+                console.log("x=" + x + " ;y="+y); 
+                console.log("$(cFilter).width()=" + $(cFilter).width() + " ;$(cFilter).height()="+ $(cFilter).height()); 
+                // 交换数据
+                if(x < $(cFilter).width() && y < $(cFilter).height()){
+                    // 判断位置 在筛选区域 
+                    $('#filterC').append($('#tableH div.item:eq(' + startIndex + ')').clone(true));
+                    $('#tableH div.item:eq(' + startIndex + ')').remove();
+                } else if(x < $(cFilter).width() && y > $(cFilter).height()){
+                    // 判断位置 在表头区域  
+                    // $('#div.item:eq(' + endIndex + ')').after($('#div.item:eq(' + startIndex + ')').clone(true));
+                    // $('div.item:eq(' + endIndex + ')').before($('#filterC div.item:eq(' + startIndex + ')').clone(true));
+                    // $('#filterC div.item:eq(' + startIndex + ')').remove();
+
+                    // 位置互换
                     if (endIndex < startIndex) {
                         // $('#mainTable tr:eq(' + i + ') td:eq(' + endIndex + ')').before($('#mainTable tr:eq(' + i + ') td:eq(' + startIndex + ')').clone(true));
                         // $('#mainTable tr:eq(' + i + ') td:eq(' + (startIndex + 1) + ')').remove();
-                        $('#tableH div:eq(' + endIndex + ')').before($('#tableH div:eq(' + startIndex + ')').clone(true));
-                        $('#tableH div:eq(' + (startIndex + 1) + ')').remove();
+                        $('div.item:eq(' + endIndex + ')').before($('div.item:eq(' + startIndex + ')').clone(true));
+                        $('div.item:eq(' + (startIndex + 1) + ')').remove();
                     } else if (endIndex > startIndex) { 
-                            // $('#mainTable tr:eq(' + i + ') td:eq(' + endIndex + ')').after($('#mainTable tr:eq(' + i + ') td:eq(' + startIndex + ')').clone(true));
-                            // $('#mainTable tr:eq(' + i + ') td:eq(' + (startIndex) + ')').remove();
-                            $('#tableH div:eq(' + endIndex + ')').after($('#tableH div:eq(' + startIndex + ')').clone(true));
-                            $('#tableH div:eq(' + (startIndex) + ')').remove(); 
-                    }
-                    $(document).unbind("mousemove");
-                    $(document).unbind("mouseup");
-                    $('#tableH div').unbind("mouseenter");
-                });
-            }
-            headers.push(header);
-        }
+                        // $('#mainTable tr:eq(' + i + ') td:eq(' + endIndex + ')').after($('#mainTable tr:eq(' + i + ') td:eq(' + startIndex + ')').clone(true));
+                        // $('#mainTable tr:eq(' + i + ') td:eq(' + (startIndex) + ')').remove();
+                        $('div.item:eq(' + endIndex + ')').after($('div.item:eq(' + startIndex + ')').clone(true));
+                        $('div.item:eq(' + (startIndex) + ')').remove(); 
+                    } 
+                }
 
-        // 容器接受事件
-        for(var i = containers.length-1; i > -1; i--){
-            /** 过滤器放置事件 */
-            // containers[i].ondragenter = function (e) { 
-            //     console.log("cFilter.ondragenter");
-            // }
+                $('#triangle').css('display', 'none');
+                $('#info').css({'display': 'none'});
 
-            /** 过滤器放置事件 */
-            containers[i].ondragover = function (event) { 
-                var e = event || window.event;
-                // console.log("cFilter.ondragover");
-                e.preventDefault();
-            }
-
-            /** 过滤器放置事件 */
-            // containers[i].ondragleave = function (e) { 
-            //     console.log("cFilter.ondragleave");
-            // }
-
-            /** 过滤器放置事件 */
-            containers[i].ondrop = function(event){
-                // 必须是父节点才可以接受元素
-                if(event.target.id == "filterC" || event.target.id == "tableH"){
-                    console.log("cFilter ondrop");
-                    var e = event || window.event;
-                    var data = e.dataTransfer.getData('text');
-                    e.target.appendChild(document.getElementById(data));
-                } 
-            }
-        }  
+                $(document).unbind("mousemove");
+                $(document).unbind("mouseup");
+                $('#tableH div').unbind("mouseenter");
+            });
+            // 拖入元素到筛选容器
+            $("#filterC").mouseenter(function(){
+                
+            })
+        });
 
         // 初始化arrow的位置
         var h = $('#tableH div').height();
         $('.arrow-up').css({
             'margin-top': h
         });
+
+
+        /** 表头拖拽事件 */  
+        $('#tableH div').dragstart = function(event){
+            var e = event || window.event;
+            e.dataTransfer.setData('text',e.target.id);
+            console.log("dragstart:" + e.target.id);
+        }
+        // header.ondragend = function(){
+        //     console.log("dragend");
+        // }
+
+        // header.ondragenter = function(){
+        //     console.log("ondragenter");
+        // } 
+        // header.ondragleave = function(){
+        //     console.log("ondragleave");
+        // } 
     } 
 
     return { 
