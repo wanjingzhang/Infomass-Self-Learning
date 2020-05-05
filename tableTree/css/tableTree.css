@@ -4,13 +4,19 @@
 }
 .filterC{
     background-color: aquamarine;
-    min-height: 200px;
+    min-height: 100px;
+    width: 100%;
+    display: inline-block;
+    padding: 5px 10px;
 }
 
 .tableH{
     background-color: burlywood;
-    min-height: 200px;
+    min-height: 100px;
     overflow: auto;
+    width: 100%;
+    display: inline-block;
+    padding: 5px 10px;
 }
 
 .filterC > div{
@@ -18,8 +24,47 @@
     background-color: white;
     cursor: pointer;
     /* margin: 2px 5px; */
-    border: 1px solid #222;
+    border: 1px solid #222; 
     float: left;
+}
+
+.filterC > div:nth-child(2){
+    margin-top: 30px;
+}
+
+.filterC > div:nth-child(3){
+    margin-top: 60px;
+}
+
+.filterC > div:nth-child(4){
+    margin-top: 90px;
+}
+
+.filterC > div:nth-child(5){
+    margin-top: 120px;
+}
+
+.filterC > div:nth-child(6){
+    margin-top: 150px;
+}
+
+.filterC > div:nth-child(7){
+    margin-top: 180px;
+}
+.filterC > div:nth-child(8){
+    margin-top: 210px;
+}
+.filterC > div:nth-child(9){
+    margin-top: 240px;
+}
+.filterC > div:nth-child(10){
+    margin-top: 270px;
+}
+.filterC > div:nth-child(11){
+    margin-top: 300px;
+}
+.filterC > div:nth-child(12){
+    margin-top: 330px;
 }
 
 .tableH > div{
