@@ -1,15 +1,15 @@
 var tableTree = function(){ 
     var tableH = document.getElementById("tableH");
     var cFilter = document.getElementById("filterC"); 
-    var tableC = document.getElementById("tableC"); 
+    // var tableC = document.getElementById("tableC"); 
     var startType, endType;
-    // 有三种状态，A->B, B->A, B->B
+    // 有三种状态，A 为filters B 为table Header，A->B, B->A, B->B
     var flag = false;
     var headers = [];
     var filters = [];  
 
     function itemMouseDown(){ 
-        console.log("itemMouseDown");
+        // console.log("itemMouseDown");
         var startIndex = $(this).data("id");
         var endIndex;
         // 鼠标按下时获取当前的类型
@@ -22,7 +22,7 @@ var tableTree = function(){
             });
             $('#info').html($(this).html());
             $(document).mousemove(function(e) {
-                console.log("doc.mouseMove");
+                // console.log("doc.mouseMove");
                 if (flag) {
                     var e = e || window.event;
                     var x = e.clientX + 15 + 'px';
@@ -39,18 +39,25 @@ var tableTree = function(){
             });
             // 拖动到表头div 即触发元素交换 B->B
             $('#tableH div').mouseenter(function() {
-                console.log("tableH div mouseEnter");
+                // console.log("tableH div mouseEnter");
                 endIndex = $(this).index();
                 endType = $(this).data("type");
+                console.log("endIndex=" + endIndex); 
                 $('#triangle').css('display', 'block'); 
                 var offsetW = 0;
                 var preTd = $(this).prevAll();
                 $.each(preTd, function(id, item) {
                     offsetW += item.offsetWidth;
                 })
-                // if (endIndex > startIndex) {
-                //     offsetW += $(this)["0"].offsetWidth;
-                // }
+                // 元素内移动 B->B
+                if(startType == "header" && endType == "header"){
+                    if (endIndex > startIndex) {
+                        offsetW += $(this)["0"].offsetWidth;
+                    }
+                }else if(startType == "filter" && endType == "header"){
+                    offsetW += $(this)["0"].offsetWidth;
+                }
+                
                 $('#triangle').css({
                     'top': $(cFilter).innerHeight() + 10,
                     'left': offsetW + 14
@@ -58,7 +65,7 @@ var tableTree = function(){
             });
             // 拖动到过滤器 即触发 B-> A 把header里的数据元素存放在A
             $('#filterC').mouseenter(function(){
-                console.log("filterC mouseEnter");
+                // console.log("filterC mouseEnter");
                 endType = "filter";
                 // 追加到A最后 
             })
@@ -67,13 +74,13 @@ var tableTree = function(){
             })
             // 交换元素
         $(document).mouseup(function(e) {
-            console.log("doc.mouseUp");
+            // console.log("doc.mouseUp");
             flag = false;  
-            console.log("startIndex=" + startIndex + "endIndex=" + endIndex); 
+            // console.log("startIndex=" + startIndex + "endIndex=" + endIndex); 
             // B->B 第三种B内的移动
             if(startType == endType && startType == "header"){ 
                 if(endIndex > startIndex){
-                    headers.splice(endIndex-1, 0, headers.splice(startIndex, 1)[0]); 
+                    headers.splice(endIndex, 0, headers.splice(startIndex, 1)[0]); 
                 }else{
                     headers.splice(endIndex, 0, headers.splice(startIndex, 1)[0]); 
                 }
@@ -86,7 +93,7 @@ var tableTree = function(){
                 if(headers.length == 0){
                     endIndex = 0;
                 }
-                headers.splice(endIndex, 0, filters.splice(startIndex, 1)[0]);   
+                headers.splice(endIndex+1, 0, filters.splice(startIndex, 1)[0]);   
             }
             
             $('div.item').unbind("mousedown");
