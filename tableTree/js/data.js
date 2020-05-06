@@ -14,16 +14,16 @@ var vTableData={
         }
     ],
     tableHeader: [
-         {"key": "deviceNo", "value": "1.工具编号"}, 
-         {"key": "deviceName", "value": "2.工具名称"}, 
-         {"key": "status", "value":"3.状态"}, 
-         {"key": "manufacture", "value":"4.制造商"},
-         {"key": "located", "value":"5.存放架/工位"}, 
-         {"key": "nextMaintenanceDate", "value":"6.下次保养时间"}, 
-         {"key": "nextCalibrationDate", "value":"7.下次校准时间"}, 
-         {"key": "sparePart", "value":"8.备件"}, 
-         {"key": "calibrationSupplier", "value":"9.校准服务提供商"}, 
-         {"key": "toolSpecification", "value":"10.工具规格"}, 
-         {"key": "procurementPrice", "value":"11.采购价格"}],
-    filters:[{"key":"filterC", "value": "1.过滤1"}]
+         {"key": "deviceNo", "value": "1.工具编号","sort":"asc"}, 
+         {"key": "deviceName", "value": "2.工具名称","sort":"desc"}, 
+         {"key": "status", "value":"3.状态","sort":"asc"}, 
+         {"key": "manufacture", "value":"4.制造商","sort":"asc"},
+         {"key": "located", "value":"5.存放架/工位","sort":"asc"}, 
+         {"key": "nextMaintenanceDate", "value":"6.下次保养时间","sort":"asc"}, 
+         {"key": "nextCalibrationDate", "value":"7.下次校准时间","sort":"asc"}, 
+         {"key": "sparePart", "value":"8.备件","sort":"asc"}, 
+         {"key": "calibrationSupplier", "value":"9.校准服务提供商","sort":"asc"}, 
+         {"key": "toolSpecification", "value":"10.工具规格","sort":"asc"}, 
+         {"key": "procurementPrice", "value":"11.采购价格","sort":"asc"}],
+    filters:[{"key":"filterTest", "value": "1.过滤测试","sort":"asc"}]
  };

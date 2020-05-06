@@ -1,6 +1,6 @@
 @charset "utf-8";
 .tableTree{
-    width: 1000px;
+    width: 1200px;
 }
 .filterC{
     background-color: aquamarine;
@@ -26,11 +26,45 @@
     /* margin: 2px 5px; */
     border: 1px solid #222; 
     float: left;
+    position:relative;
 }
 
 .filterC > div:nth-child(2){
     margin-top: 30px;
 }
+
+.filterC > div:nth-child(1):before{
+    content:none;
+}
+.filterC > div:before{
+    content:"";
+    width:30%;
+    height:50%;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #a8a8a8;
+    border-left: 1px solid #a8a8a8;
+    left: calc(-30% - 2px);
+    top: calc(-50% + 4px) ;
+    position:absolute; 
+    z-index: 0;
+}
+
+.filterC > div.asc:after{
+    content:"";  
+    border-top:solid 6px red;
+    border-left:solid 6px transparent;
+    border-right:solid 6px transparent;
+    display: inline-block;
+}
+.filterC > div.desc:after{  
+    content:"";  
+    border-bottom: solid 6px red; 
+    border-left:solid 6px transparent;
+    border-right:solid 6px transparent;
+    display: inline-block; 
+}
+
 
 .filterC > div:nth-child(3){
     margin-top: 60px;
