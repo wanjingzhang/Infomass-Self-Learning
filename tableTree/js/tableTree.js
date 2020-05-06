@@ -23,25 +23,26 @@ var tableTree = function () {
             firstTime = new Date().getTime();
         }
         // 状态3 B内元素的拖动  
-        
+        flag = true; 
         $('#info').html($(this).html()); 
         $(document).mousemove(function (e) { 
-            flag = true; 
-            $('#info').css({
-                display: 'block'
-            });
-            
-            var e = e || window.event;
-            var x = e.clientX + 15 + 'px';
-            var y = e.clientY + 15 + 'px';
-            $('#info').css({
-                left: x,
-                top: y
-            });
-            if (e.preventDefault) {
-                e.preventDefault();
+            if (flag) {
+                $('#info').css({
+                    display: 'block'
+                });
+                
+                var e = e || window.event;
+                var x = e.clientX + 15 + 'px';
+                var y = e.clientY + 15 + 'px';
+                $('#info').css({
+                    left: x,
+                    top: y
+                });
+                if (e.preventDefault) {
+                    e.preventDefault();
+                }
+                return false;
             }
-            return false; 
         });
         // 拖动到表头div 即触发元素交换 B->B
         $('#tableH div').mouseenter(function () {
@@ -91,29 +92,29 @@ var tableTree = function () {
             if( (lastTime - firstTime) < 200 && startType == "filter"){  
                 filters[startIndex].sort = (filters[startIndex].sort == "asc" ? "desc":"asc"); 
             }
-            if(flag == true){
-                // console.log("doc.mouseUp");
-                flag = false;
-                // console.log("startIndex=" + startIndex + "endIndex=" + endIndex); 
-                // B->B 第三种B内的移动
-                if (startType == endType && startType == "header") {
+            // console.log("doc.mouseUp");
+            flag = false;
+            // console.log("startIndex=" + startIndex + "endIndex=" + endIndex); 
+            // B->B 第三种B内的移动
+            if (startType == endType && startType == "header") {
+                if(endIndex){
                     if (endIndex > startIndex) {
                         headers.splice(endIndex, 0, headers.splice(startIndex, 1)[0]);
                     } else {
                         headers.splice(endIndex, 0, headers.splice(startIndex, 1)[0]);
                     } 
-                    // B->A 第二种移动 
-                } else if (startType == "header" && endType == "filter") {
-                    filters.push(headers.splice(startIndex, 1)[0]);
-                    // A->B 第一种移动
-                } else if (startType == "filter" && endType == "header") {
-                    headers.splice(endIndex, 0, filters.splice(startIndex, 1)[0]);
                 }
-
-                $('div.item').unbind("mousedown");
-                initDisplay(headers, filters);
+                
+                // B->A 第二种移动 
+            } else if (startType == "header" && endType == "filter") {
+                filters.push(headers.splice(startIndex, 1)[0]);
+                // A->B 第一种移动
+            } else if (startType == "filter" && endType == "header") {
+                headers.splice(endIndex, 0, filters.splice(startIndex, 1)[0]);
             }
-            
+
+            $('div.item').unbind("mousedown");
+            initDisplay(headers, filters);
 
             $('#triangle').css({ 'display': 'none' });
             $('#info').css({ 'display': 'none' });
