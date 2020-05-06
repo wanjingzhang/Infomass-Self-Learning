@@ -14,21 +14,24 @@ var tableTree = function () {
      * 鼠标按下
      */
     function itemMouseDown(eMouseDown) {
-        // console.log("itemMouseDown");
-        firstTime = new Date().getTime();
+        // console.log("itemMouseDown"); 
         var startIndex = $(this).data("id");
         var endIndex;
         // 鼠标按下时获取当前的类型
         startType = $(this).data("type");
+        if(startType == "filter"){
+            firstTime = new Date().getTime();
+        }
         // 状态3 B内元素的拖动  
-        flag = true;
-        $('#info').css({
-            display: 'block'
-        });
-        $('#info').html($(this).html());
+        flag = true; 
+        $('#info').html($(this).html()); 
         $(document).mousemove(function (e) {
             // console.log("doc.mouseMove");
             if (flag) {
+                $('#info').css({
+                    display: 'block'
+                });
+                
                 var e = e || window.event;
                 var x = e.clientX + 15 + 'px';
                 var y = e.clientY + 15 + 'px';
@@ -87,8 +90,8 @@ var tableTree = function () {
             /**
              * 单击元素排序
              */   
-            if( (lastTime - firstTime) < 200){  
-                filters[startIndex]["sort"] = (filters[startIndex]["sort"] == "asc" ? "desc":"asc"); 
+            if( (lastTime - firstTime) < 100 && startType == "filter"){  
+                filters[startIndex].sort = (filters[startIndex].sort == "asc" ? "desc":"asc"); 
             }
             // console.log("doc.mouseUp");
             flag = false;
@@ -159,7 +162,7 @@ var tableTree = function () {
         initDisplay(vTableData.tableHeader, vTableData.filters);
 
         // 初始化arrow的位置
-        var h = $('#tableH div').height();
+        var h = $('#tableH .item:nth-child(1)').outerHeight();
         $('.arrow-up').css({
             'margin-top': h
         });

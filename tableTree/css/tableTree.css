@@ -3,7 +3,7 @@
     width: 1200px;
 }
 .filterC{
-    background-color: aquamarine;
+    background-color: rgb(240,240,240);
     min-height: 100px;
     width: 100%;
     display: inline-block;
@@ -11,7 +11,7 @@
 }
 
 .tableH{
-    background-color: burlywood;
+    background-color: rgb(255,255,255);
     min-height: 100px;
     overflow: auto;
     width: 100%;
@@ -23,8 +23,8 @@
     display: inline-block;
     background-color: white;
     cursor: pointer;
-    /* margin: 2px 5px; */
-    border: 1px solid #222; 
+    padding: 2px 5px;
+    border: 1px solid #a8a8a8;
     float: left;
     position:relative;
 }
@@ -45,24 +45,24 @@
     border-bottom: 1px solid #a8a8a8;
     border-left: 1px solid #a8a8a8;
     left: calc(-30% - 2px);
-    top: calc(-50% + 4px) ;
-    position:absolute; 
+    top: calc(-50% + 11px);
+    position:absolute;
     z-index: 0;
 }
 
 .filterC > div.asc:after{
-    content:"";  
-    border-top:solid 6px red;
+    content:"";
+    border-top: solid 6px #a8a8a8;
     border-left:solid 6px transparent;
     border-right:solid 6px transparent;
     display: inline-block;
 }
-.filterC > div.desc:after{  
-    content:"";  
-    border-bottom: solid 6px red; 
+.filterC > div.desc:after{
+    content:"";
+    border-bottom: solid 6px #a8a8a8;
     border-left:solid 6px transparent;
     border-right:solid 6px transparent;
-    display: inline-block; 
+    display: inline-block;
 }
 
 
@@ -103,12 +103,12 @@
 
 .tableH > div{
     display: inline;
-    background-color: pink;
+    background-color: rgb(250,250,250);
     cursor: pointer;
     /* margin: 2px 5px; */
-    border: 1px solid #222;
-    padding: 2px 5px;
-    /* float: left; */
+    border-right: 1px solid #ccc;
+    padding: 20px 8px;
+    float: left;
 }
 
 /* 虚拟拖动 */
