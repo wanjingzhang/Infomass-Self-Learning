@@ -23,27 +23,25 @@ var tableTree = function () {
             firstTime = new Date().getTime();
         }
         // 状态3 B内元素的拖动  
-        flag = true; 
+        
         $('#info').html($(this).html()); 
-        $(document).mousemove(function (e) {
-            // console.log("doc.mouseMove");
-            if (flag) {
-                $('#info').css({
-                    display: 'block'
-                });
-                
-                var e = e || window.event;
-                var x = e.clientX + 15 + 'px';
-                var y = e.clientY + 15 + 'px';
-                $('#info').css({
-                    left: x,
-                    top: y
-                });
-                if (e.preventDefault) {
-                    e.preventDefault();
-                }
-                return false;
+        $(document).mousemove(function (e) { 
+            flag = true; 
+            $('#info').css({
+                display: 'block'
+            });
+            
+            var e = e || window.event;
+            var x = e.clientX + 15 + 'px';
+            var y = e.clientY + 15 + 'px';
+            $('#info').css({
+                left: x,
+                top: y
+            });
+            if (e.preventDefault) {
+                e.preventDefault();
             }
+            return false; 
         });
         // 拖动到表头div 即触发元素交换 B->B
         $('#tableH div').mouseenter(function () {
@@ -71,8 +69,8 @@ var tableTree = function () {
             }
 
             $('#triangle').css({
-                'top': $(cFilter).innerHeight() + 10,
-                'left': offsetW + 14
+                'top': $(cFilter).innerHeight() + 4,
+                'left': offsetW + 4 
             });
         });
         // 拖动到过滤器 即触发 B-> A 把header里的数据元素存放在A
@@ -90,29 +88,32 @@ var tableTree = function () {
             /**
              * 单击元素排序
              */   
-            if( (lastTime - firstTime) < 100 && startType == "filter"){  
+            if( (lastTime - firstTime) < 200 && startType == "filter"){  
                 filters[startIndex].sort = (filters[startIndex].sort == "asc" ? "desc":"asc"); 
             }
-            // console.log("doc.mouseUp");
-            flag = false;
-            // console.log("startIndex=" + startIndex + "endIndex=" + endIndex); 
-            // B->B 第三种B内的移动
-            if (startType == endType && startType == "header") {
-                if (endIndex > startIndex) {
-                    headers.splice(endIndex, 0, headers.splice(startIndex, 1)[0]);
-                } else {
-                    headers.splice(endIndex, 0, headers.splice(startIndex, 1)[0]);
-                } 
-                // B->A 第二种移动 
-            } else if (startType == "header" && endType == "filter") {
-                filters.push(headers.splice(startIndex, 1)[0]);
-                // A->B 第一种移动
-            } else if (startType == "filter" && endType == "header") {
-                headers.splice(endIndex, 0, filters.splice(startIndex, 1)[0]);
-            }
+            if(flag == true){
+                // console.log("doc.mouseUp");
+                flag = false;
+                // console.log("startIndex=" + startIndex + "endIndex=" + endIndex); 
+                // B->B 第三种B内的移动
+                if (startType == endType && startType == "header") {
+                    if (endIndex > startIndex) {
+                        headers.splice(endIndex, 0, headers.splice(startIndex, 1)[0]);
+                    } else {
+                        headers.splice(endIndex, 0, headers.splice(startIndex, 1)[0]);
+                    } 
+                    // B->A 第二种移动 
+                } else if (startType == "header" && endType == "filter") {
+                    filters.push(headers.splice(startIndex, 1)[0]);
+                    // A->B 第一种移动
+                } else if (startType == "filter" && endType == "header") {
+                    headers.splice(endIndex, 0, filters.splice(startIndex, 1)[0]);
+                }
 
-            $('div.item').unbind("mousedown");
-            initDisplay(headers, filters);
+                $('div.item').unbind("mousedown");
+                initDisplay(headers, filters);
+            }
+            
 
             $('#triangle').css({ 'display': 'none' });
             $('#info').css({ 'display': 'none' });
@@ -167,13 +168,7 @@ var tableTree = function () {
 
     /** 初始化数据 */
     function initHeader() {
-        initDisplay(vTableData.tableHeader, vTableData.filters);
-
-        // 初始化arrow的位置
-        var h = $('#tableH .item:nth-child(1)').outerHeight();
-        $('.arrow-up').css({
-            'margin-top': h
-        });
+        initDisplay(vTableData.tableHeader, vTableData.filters); 
     }
 
     return {
