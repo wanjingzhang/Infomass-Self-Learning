@@ -1,12 +1,18 @@
 var tableTree = function () {
     var tableH = document.getElementById("tableH");
     var cFilter = document.getElementById("filterC");
-    // var tableC = document.getElementById("tableC"); 
+    var tableC = document.getElementById("tableC"); 
     var startType, endType;
     // 有三种状态，A 为filters B 为table Header，A->B, B->A, B->B
     var flag = false;
+    // 表头数据
     var headers = [];
+    // 过滤字段
     var filters = [];
+    // 数据集
+    var data = [];
+    // 表格宽度
+    var widthPercent = [];
     var firstTime = 0;
     var lastTime = 0;
  
@@ -114,7 +120,7 @@ var tableTree = function () {
             }
 
             $('div.item').unbind("mousedown");
-            initDisplay(headers, filters);
+            initDisplay(headers, filters, data);
 
             $('#triangle').css({ 'display': 'none' });
             $('#info').css({ 'display': 'none' });
@@ -130,38 +136,46 @@ var tableTree = function () {
      * 初始化表头显示数据
      * @param {*} h 表头元素
      * @param {*} f 过滤元素
+     * @param {*} d 数据元素
      */
-    function initDisplay(h, f) { 
+    function initDisplay(h, f, d) { 
         var str = "";
         headers = h;
         var total = 100;
+        widthPercent = [];
         var itemWid = Math.floor(100/ headers.length);
         for (var i = 0; i < headers.length; i++) {
             if(i < headers.length -1 ){
-                total -= itemWid;
-            }else if(i == headers.length -1){
+                total -= itemWid; 
+            }else if(i == headers.length -1){ 
                 itemWid = total;
             } 
+            widthPercent.push(itemWid);
             str += "<div class='item' id='" + headers[i].key + "' data-type='header' data-id='" + i + "' style='width:"+ itemWid +"%'>" + headers[i].value + "</div>"
         }
         tableH.innerHTML = str;
         // 初始化过滤器
         str = "";
-        filters = f;
-        
+        filters = f; 
         for (var i = 0; i < filters.length; i++) {
             str += "<div class='item "+ filters[i].sort +"' id='" + filters[i].key + "' data-type='filter' data-id='" + i + "'   >" + filters[i].value + "</div>"
         }
         cFilter.innerHTML = str;
 
-        // for(var i = 0; i > vTableData.data.length; i++){
-        //     str += "<div>"
-        //     for(var j in vTableData.data[i]){
-        //         str += "";
-        //     }
-        //     str += "</div>"
-        // }
-        // tableC.innerHTML = str;
+        data = d;
+        str = "";
+        if(headers.length > 0){
+            for(var i = 0; i < data.length; i++){
+                str += "<div class='element'>"
+                // 遍历头部数据 动态填充表格
+                for(var j in headers){
+                    str += "<div class='el' style='width:"+ widthPercent[j] +"%'>" + data[i][headers[j].key] + "</div>"; 
+                }
+                str += "</div>"
+            }
+        } 
+        console.log(str);
+        tableC.innerHTML = str;
 
         // 表头拖动事件
         $('div.item').mousedown(itemMouseDown); 
@@ -169,7 +183,7 @@ var tableTree = function () {
 
     /** 初始化数据 */
     function initHeader() {
-        initDisplay(vTableData.tableHeader, vTableData.filters); 
+        initDisplay(vTableData.tableHeader, vTableData.filters, vTableData.data); 
     }
 
     return {

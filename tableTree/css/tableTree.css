@@ -19,7 +19,7 @@
 
 .tableH{
     min-height: 30px;
-    overflow: auto;
+    overflow: hidden;
     width: 100%;
     display: inline-block;
     padding: 5px 0;
@@ -205,4 +205,29 @@
     position:absolute;
     top:0px;
     left:4px;
+}
+/* 表格内容 */
+.tableC{
+    overflow: hidden;
+    margin-top: -4px;
+}
+.element{
+    border-bottom: 1px solid #cccccc;
+    padding: 5px 0;
+}
+
+.el{
+    display:inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.el:after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 1px;
+    height:80px;
+    background-color: #ccc;
 }
