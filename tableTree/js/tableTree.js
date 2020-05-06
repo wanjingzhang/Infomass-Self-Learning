@@ -132,13 +132,21 @@ var tableTree = function () {
     function initDisplay(h, f) { 
         var str = "";
         headers = h;
+        var total = 100;
+        var itemWid = Math.floor(100/ headers.length);
         for (var i = 0; i < headers.length; i++) {
-            str += "<div class='item' id='" + headers[i].key + "' data-type='header' data-id='" + i + "' draggable='true' >" + headers[i].value + "</div>"
+            if(i < headers.length -1 ){
+                total -= itemWid;
+            }else if(i == headers.length -1){
+                itemWid = total;
+            } 
+            str += "<div class='item' id='" + headers[i].key + "' data-type='header' data-id='" + i + "' draggable='true' style='width:"+ itemWid +"%'>" + headers[i].value + "</div>"
         }
         tableH.innerHTML = str;
         // 初始化过滤器
         str = "";
         filters = f;
+        
         for (var i = 0; i < filters.length; i++) {
             str += "<div class='item "+ filters[i].sort +"' id='" + filters[i].key + "' data-type='filter' data-id='" + i + "' draggable='true' >" + filters[i].value + "</div>"
         }
