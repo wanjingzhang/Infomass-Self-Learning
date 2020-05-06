@@ -142,7 +142,7 @@ var tableTree = function () {
             }else if(i == headers.length -1){
                 itemWid = total;
             } 
-            str += "<div class='item' id='" + headers[i].key + "' data-type='header' data-id='" + i + "' draggable='true' style='width:"+ itemWid +"%'>" + headers[i].value + "</div>"
+            str += "<div class='item' id='" + headers[i].key + "' data-type='header' data-id='" + i + "' style='width:"+ itemWid +"%'>" + headers[i].value + "</div>"
         }
         tableH.innerHTML = str;
         // 初始化过滤器
@@ -150,7 +150,7 @@ var tableTree = function () {
         filters = f;
         
         for (var i = 0; i < filters.length; i++) {
-            str += "<div class='item "+ filters[i].sort +"' id='" + filters[i].key + "' data-type='filter' data-id='" + i + "' draggable='true' >" + filters[i].value + "</div>"
+            str += "<div class='item "+ filters[i].sort +"' id='" + filters[i].key + "' data-type='filter' data-id='" + i + "'   >" + filters[i].value + "</div>"
         }
         cFilter.innerHTML = str;
 
