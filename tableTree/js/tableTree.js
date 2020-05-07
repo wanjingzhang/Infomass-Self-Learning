@@ -20,32 +20,27 @@ var tableTree = function () {
  
     /**
      * 把数据按字段分组
-     */
+     */ 
     function groupData(){
-        var arr = [
-            {"id":"1001","name":"值1","value":"111"},
-            {"id":"1001","name":"值1","value":"11111"},
-            {"id":"1002","name":"值2","value":"25462"},
-            {"id":"1002","name":"值2","value":"23131"},
-            {"id":"1002","name":"值2","value":"2315432"},
-            {"id":"1003","name":"值3","value":"333333"}
-        ];
+        var arr = vTableData.data;
         
         var map = {},
             dest = [];
+        // 遍历整张数据表
         for(var i = 0; i < arr.length; i++){
             var ai = arr[i];
-            if(!map[ai.id]){
-                dest.push({
-                    id: ai.id,
-                    name: ai.name,
-                    data: [ai]
-                });
-                map[ai.id] = ai;
+            if(!map[ai[filters[0].key]]){// ai.id 
+
+                var obj = new Object();
+                obj[filters[0].key] = ai[filters[0].key];
+                obj.data = [ai];
+                dest.push(obj);
+
+                map[ai[filters[0].key]] = ai; 
             }else{
                 for(var j = 0; j < dest.length; j++){
                     var dj = dest[j];
-                    if(dj.id == ai.id){
+                    if(dj[filters[0].key] == ai[filters[0].key]){
                         dj.data.push(ai);
                         break;
                     }
@@ -54,7 +49,7 @@ var tableTree = function () {
         }
         
         console.log(dest);
-    }
+    } 
     /***
      * 鼠标按下
      */
@@ -220,9 +215,9 @@ var tableTree = function () {
     }
 
     /** 初始化数据 */
-    function initHeader() {
-        groupData();
+    function initHeader() { 
         initDisplay(vTableData.tableHeader, vTableData.filters, vTableData.data); 
+        groupData();
     }
 
     return {
