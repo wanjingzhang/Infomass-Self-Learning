@@ -2,6 +2,7 @@ var tableTree = function () {
     var tableH = document.getElementById("tableH");
     var cFilter = document.getElementById("filterC");
     var tableC = document.getElementById("tableC"); 
+    
     var startType, endType;
     // 有三种状态，A 为filters B 为table Header，A->B, B->A, B->B
     var flag = false;
@@ -13,13 +14,51 @@ var tableTree = function () {
     var data = [];
     // 表格宽度
     var widthPercent = [];
+    // 模拟单击事件 200ms内
     var firstTime = 0;
     var lastTime = 0;
  
+    /**
+     * 把数据按字段分组
+     */
+    function groupData(){
+        var arr = [
+            {"id":"1001","name":"值1","value":"111"},
+            {"id":"1001","name":"值1","value":"11111"},
+            {"id":"1002","name":"值2","value":"25462"},
+            {"id":"1002","name":"值2","value":"23131"},
+            {"id":"1002","name":"值2","value":"2315432"},
+            {"id":"1003","name":"值3","value":"333333"}
+        ];
+        
+        var map = {},
+            dest = [];
+        for(var i = 0; i < arr.length; i++){
+            var ai = arr[i];
+            if(!map[ai.id]){
+                dest.push({
+                    id: ai.id,
+                    name: ai.name,
+                    data: [ai]
+                });
+                map[ai.id] = ai;
+            }else{
+                for(var j = 0; j < dest.length; j++){
+                    var dj = dest[j];
+                    if(dj.id == ai.id){
+                        dj.data.push(ai);
+                        break;
+                    }
+                }
+            }
+        }
+        
+        console.log(dest);
+    }
     /***
      * 鼠标按下
      */
-    function itemMouseDown(eMouseDown) {
+    function itemMouseDown() {
         // console.log("itemMouseDown"); 
         var startIndex = $(this).data("id");
         var endIndex;
@@ -173,8 +212,7 @@ var tableTree = function () {
                 }
                 str += "</div>"
             }
-        } 
-        console.log(str);
+        }  
         tableC.innerHTML = str;
 
         // 表头拖动事件
@@ -183,6 +221,7 @@ var tableTree = function () {
 
     /** 初始化数据 */
     function initHeader() {
+        groupData();
         initDisplay(vTableData.tableHeader, vTableData.filters, vTableData.data); 
     }
 
