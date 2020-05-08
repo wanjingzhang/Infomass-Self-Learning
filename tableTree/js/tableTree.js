@@ -24,31 +24,39 @@ var tableTree = function () {
      * 更新字段分组，按照数据筛选数组
      */ 
     function updateViewer(){  
-        var d = {};  
-        // 遍历整张数据表 
-        for(var k in filters){
-            var type = filters[k].key;  
-            for(var j in filterData[type]){  
-                if(!d[type]){
-                    d[type] = new Object(); 
+        if(filters.length == 0) return;
+        var obj = {};  
+        // 遍历整张数据表 递归 得到树
+        var k = 0;  
+        for(var k=0; k< filters.length;k++){ 
+            var type = filters[k].key;    
+            if(k == 0){
+                obj = filterData[type];  
+            } 
+            else if(k == 1){
+                for(var i in obj){
+                    obj[i] = filterData[type];
                 }
-                if(!d[type][j]){
-                    d[type][j] = {data:[]};
-                    d[type][j].data = data.filter(function(item){
-                        if(item[type] == j){
-                            return true;
-                        }
-                    })
-                    // map the data，get the filter group
-
-                    // d[type][j].data.push(data[i]);  
-                }else{
-                    d[type][j].data.push(data[i]);  
+            } 
+            else if(k == 2){
+                for(var i in obj){
+                    for(var j in obj[i]){
+                        obj[i][j] = filterData[type];
+                    } 
                 }
-            }  
+            }
+            else if(k == 3){
+                for(var i in obj){
+                    for(var j in obj[i]){
+                        for(var h in obj[i][j]){
+                            obj[i][j][h] = filterData[type];
+                        } 
+                    } 
+                }
+            }
         }  
-        console.log(d);
-    } 
+        console.log(obj);  
+    }
    
     /***
      * 鼠标按下
