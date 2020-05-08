@@ -28,6 +28,7 @@ var vTableData={
     tableHeader: [
          {"key": "deviceNo", "value": "1.工具编号","sort":"asc"},
          {"key": "deviceName", "value": "2.工具名称","sort":"desc"},  
+         {"key": "status", "value":"3.状态","sort":"asc"},
          {"key": "manufacture", "value":"4.制造商","sort":"asc"},
          {"key": "located", "value":"5.存放架/工位","sort":"asc"}, 
          {"key": "nextMaintenanceDate", "value":"6.下次保养时间","sort":"asc"}, 
@@ -36,12 +37,11 @@ var vTableData={
          {"key": "calibrationSupplier", "value":"9.校准服务提供商","sort":"asc"}, 
          {"key": "toolSpecification", "value":"10.工具规格","sort":"asc"}, 
          {"key": "procurementPrice", "value":"11.采购价格","sort":"asc"}],
-    filtersHeader:[{"key": "status", "value":"3.状态","sort":"asc"}],
+    filtersHeader:[],
     filterData: {
             "status": {"可用":"可用", "维修中":"维修中","校准中":"校准中"}, 
             "deviceNo": {"0005":"0005","0006":"0006"}
-        }
-    
+        } 
  };
 
  /**
