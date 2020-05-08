@@ -12,44 +12,74 @@ var tableTree = function () {
     var filters = [];
     // 数据集
     var data = [];
+    // 过滤数据集
+    var filterData = {};
     // 表格宽度
     var widthPercent = [];
     // 模拟单击事件 200ms内
     var firstTime = 0;
     var lastTime = 0;
+
+    /**
+     * 获取当前字段的值
+     */
+    function getCurrentColum(type,arr){
+        var map = {};
+        for(var i = 0; i < arr.length; i++){
+            var ai = arr[i];
+            if(!map[ai[type]]){// ai.id  
+                var obj = new Object();
+                obj[filters[0].key] = ai[filters[0].key];
+                obj.data = [ai]; 
+                map[ai[type]] = ''; 
+            }
+        } 
+        return map;
+    }
  
     /**
      * 把数据按字段分组
      */ 
-    function groupData(){
-        var arr = vTableData.data;
+    // function groupData(){
+    //     var arr = vTableData.tableData;
         
-        var map = {},
-            dest = [];
-        // 遍历整张数据表
-        for(var i = 0; i < arr.length; i++){
-            var ai = arr[i];
-            if(!map[ai[filters[0].key]]){// ai.id 
-
-                var obj = new Object();
-                obj[filters[0].key] = ai[filters[0].key];
-                obj.data = [ai];
-                dest.push(obj);
-
-                map[ai[filters[0].key]] = ai; 
-            }else{
-                for(var j = 0; j < dest.length; j++){
-                    var dj = dest[j];
-                    if(dj[filters[0].key] == ai[filters[0].key]){
-                        dj.data.push(ai);
-                        break;
-                    }
-                }
-            }
-        }
+    //     var map = {},
+    //         dest = [];
+    //     // 遍历整张数据表
+    //     for(var i = 0; i < arr.length; i++){
+    //         var ai = arr[i];
+    //         if(!map[ai[filters[0].key]]){// ai.id  
+    //             var obj = new Object();
+    //             obj[filters[0].key] = ai[filters[0].key];
+    //             obj.data = [ai];
+    //             dest.push(obj); 
+    //             map[ai[filters[0].key]] = ai; 
+    //         }else{
+    //             for(var j = 0; j < dest.length; j++){
+    //                 var dj = dest[j];
+    //                 if(dj[filters[0].key] == ai[filters[0].key]){
+    //                     dj.data.push(ai);
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //     }
         
-        console.log(dest);
-    } 
+    //     console.log(dest); 
+    //     map = [];
+
+    //     // 获取总类型
+    //     for(var i = 0; i< filters.length; i++){
+    //         filters[i].key;
+    //         // 遍历数据集合
+    //         for(var j = 0; j < vTableData.tableData.length; j++){
+    //             var ai = vTableData.tableData[j];
+    //             if(!map[i][ai[filters[i].key]]){ 
+    //                 map[i][ai[filters[i].key]] = ai;  
+    //             }
+    //         }
+    //     }
+    // } 
     /***
      * 鼠标按下
      */
@@ -147,7 +177,7 @@ var tableTree = function () {
                 
                 // B->A 第二种移动 
             } else if (startType == "header" && endType == "filter") {
-                filters.push(headers.splice(startIndex, 1)[0]);
+                filters.push(headers.splice(startIndex, 1)[0]); 
                 // A->B 第一种移动
             } else if (startType == "filter" && endType == "header") {
                 headers.splice(endIndex, 0, filters.splice(startIndex, 1)[0]);
@@ -167,14 +197,11 @@ var tableTree = function () {
     }
 
     /**
-     * 初始化表头显示数据
-     * @param {*} h 表头元素
-     * @param {*} f 过滤元素
-     * @param {*} d 数据元素
+     * 初始化表头显示数据 
      */
-    function initDisplay(h, f, d) { 
+    function initDisplay(d) {    
         var str = "";
-        headers = h;
+        headers = d.tableHeader;
         var total = 100;
         widthPercent = [];
         var itemWid = Math.floor(100/ headers.length);
@@ -190,13 +217,13 @@ var tableTree = function () {
         tableH.innerHTML = str;
         // 初始化过滤器
         str = "";
-        filters = f; 
+        filters = d.filtersHeader; 
         for (var i = 0; i < filters.length; i++) {
             str += "<div class='item "+ filters[i].sort +"' id='" + filters[i].key + "' data-type='filter' data-id='" + i + "'   >" + filters[i].value + "</div>"
         }
         cFilter.innerHTML = str;
 
-        data = d;
+        data = d.tableData;
         str = "";
         if(headers.length > 0){
             for(var i = 0; i < data.length; i++){
@@ -216,8 +243,18 @@ var tableTree = function () {
 
     /** 初始化数据 */
     function initHeader() { 
-        initDisplay(vTableData.tableHeader, vTableData.filters, vTableData.data); 
-        groupData();
+        initDisplay(vTableData); 
+        initFilters();
+        // groupData();
+    }
+
+    // 遍历整个数据集
+    function initFilters(){ 
+        // 字段条目
+        for(var j in data[0]){ 
+            filterData[j] = getCurrentColum(j, data);
+        }  
+        console.log(filterData);
     }
 
     return {

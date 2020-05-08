@@ -1,5 +1,5 @@
 var vTableData={
-     data: [
+     tableData: [
         {"deviceNo":"0001","deviceName":"百分表","status":"可用","manufacture":"成都成量工具集团",
         "located":"成都","nextMaintenanceDate":"2020/8/1","nextCalibrationDate":"2020/10/1",
         "sparePart":1,"calibrationSupplier":"中国测试研究院","toolSpecification":"(0-10)mm","procurementPrice":"¥300.00"
@@ -36,7 +36,12 @@ var vTableData={
          {"key": "calibrationSupplier", "value":"9.校准服务提供商","sort":"asc"}, 
          {"key": "toolSpecification", "value":"10.工具规格","sort":"asc"}, 
          {"key": "procurementPrice", "value":"11.采购价格","sort":"asc"}],
-    filters:[{"key": "status", "value":"3.状态","sort":"asc"}]
+    filtersHeader:[{"key": "status", "value":"3.状态","sort":"asc"}],
+    filterData: {
+            "status": {"可用":"可用", "维修中":"维修中","校准中":"校准中"}, 
+            "deviceNo": {"0005":"0005","0006":"0006"}
+        }
+    
  };
 
  /**
