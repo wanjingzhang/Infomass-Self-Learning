@@ -28,16 +28,32 @@ var tableTree = function () {
         var obj = {};  
         // 遍历整张数据表 递归 得到树
         var k = 0;  
-        for(var k=0; k< filters.length;k++){ 
-            var type = filters[k].key;    
+        var type = [];
+        for(var k=0; k< filters.length;k++){  
+            type.push(filters[k].key);  
             if(k == 0){
-                obj = filterData[type];  
+                obj = filterData[type[k]]; 
+                for(var i in obj){
+                    obj[i] = data.filter(function(item){
+                        if(item[type[k]] == i){
+                            return true;
+                        }
+                    })
+                }  
             } 
             else if(k == 1){
-                for(var i in obj){
-                    obj[i] = filterData[type];
+                for(var i in obj){ 
+                    obj[i] = filterData[type[k]];
+                    for(var h in obj[i]){
+                        obj[i][h] = data.filter(function(item){
+                            console.log(i + k + " item[type]=" + item[type[k]]+ " item[filters[0].key]=" + item[filters[0].key]);
+                            if(item[type[k]] == h && item[type[k-1]] == i){  
+                                return true;
+                            }
+                        })
+                    }  
                 }
-            } 
+            }   
             else if(k == 2){
                 for(var i in obj){
                     for(var j in obj[i]){
