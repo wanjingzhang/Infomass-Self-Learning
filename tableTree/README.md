@@ -12,8 +12,7 @@ Steps:
 ----
 1. Create two different areas, one for the header of the table, and one for the container of the dragging elements.
 1. Achieve the head of table sort function. User can drag the corresponding element to the position who want.
-1. Add the tree firstly.
-1. filters the data
+1. Add the tree structure firstly. 
 
 
 

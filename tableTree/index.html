@@ -7,7 +7,12 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Table Group Tree</title>
     <link rel="stylesheet" type="text/css" href="css/tableTree.css"> 
-    <script type="text/javascript" src="js/jquery.min.js"></script> 
+    <link rel="stylesheet" href="zTreeStyle/zTreeStyle.css" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>  
+    <script type="text/javascript" src="zTreeStyle/js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="zTreeStyle/js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="zTreeStyle/js/jquery.ztree.excheck.js"></script>
+    <script type="text/javascript" src="zTreeStyle/js/jquery.ztree.exedit.js"></script>
 </head>
 
 <body>
@@ -25,9 +30,11 @@
             <!-- <ul id="treeConfig" class="ztree"></ul> -->
         </div>
         <!-- 数据表集合 -->
-        <div class="tableC" id="tableC"> 
+        <ul id="treeData" class="ztree"></ul>
+        
+        <!-- <div class="tableC" id="tableC">  -->
             <!-- <div class="element"><div class="el" style="width:10%">百分表</div><div class="el" style="width:10%">enable</div><div class="el" style="width:10%">成都成量工具集团</div><div class="el" style="width:10%">成都</div><div class="el" style="width:10%">2020/8/1</div><div class="el" style="width:10%">2020/10/1</div><div class="el" style="width:10%">1</div><div class="el" style="width:10%">中国测试研究院</div><div class="el" style="width:10%">(0-10)mm</div><div class="el" style="width:10%">¥300.00</div></div> -->
-        </div>
+        <!-- </div> -->
         <div id="info"></div>
         <div id="triangle">
             <div class="arrow arrow-down"></div>

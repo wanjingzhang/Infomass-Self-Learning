@@ -1,26 +1,26 @@
 var vTableData={
      tableData: [
-        {"deviceNo":"0001","deviceName":"百分表1","status":"可用","manufacture":"成都成量工具集团",
+        {"id":"1","deviceNo":"0001","deviceName":"百分表1","status":"可用","manufacture":"成都成量工具集团",
         "located":"成都","nextMaintenanceDate":"2020/8/1","nextCalibrationDate":"2020/10/1",
         "sparePart":1,"calibrationSupplier":"云南测试研究院","toolSpecification":"(0-10)mm","procurementPrice":"¥300.00"
         },
-        {"deviceNo":"0002","deviceName":"电压表","status":"维修中","manufacture":"上海成量工具集团",
+        {"id":"2","deviceNo":"0002","deviceName":"电压表","status":"维修中","manufacture":"上海成量工具集团",
         "located":"上海","nextMaintenanceDate":"2020/8/1","nextCalibrationDate":"2020/10/1",
         "sparePart":1,"calibrationSupplier":"上海测试研究院","toolSpecification":"(0-10)mm","procurementPrice":"¥300.00"
         },
-        {"deviceNo":"0003","deviceName":"电流表","status":"校准中","manufacture":"重庆成量工具集团",
+        {"id":"3","deviceNo":"0003","deviceName":"电流表","status":"校准中","manufacture":"重庆成量工具集团",
         "located":"重庆","nextMaintenanceDate":"2020/8/1","nextCalibrationDate":"2020/10/1",
         "sparePart":1,"calibrationSupplier":"广州测试研究院","toolSpecification":"(0-10)mm","procurementPrice":"¥300.00"
         },
-        {"deviceNo":"0004","deviceName":"百分表3","status":"可用","manufacture":"成都成量工具集团",
+        {"id":"4","deviceNo":"0004","deviceName":"百分表3","status":"可用","manufacture":"成都成量工具集团",
         "located":"成都2","nextMaintenanceDate":"2020/8/1","nextCalibrationDate":"2020/10/1",
         "sparePart":1,"calibrationSupplier":"中国测试研究院","toolSpecification":"(0-10)mm","procurementPrice":"¥300.00"
         },
-        {"deviceNo":"0005","deviceName":"百分表1","status":"维修中","manufacture":"上海成量工具集团",
+        {"id":"5","deviceNo":"0005","deviceName":"百分表1","status":"维修中","manufacture":"上海成量工具集团",
         "located":"上海2","nextMaintenanceDate":"2020/8/1","nextCalibrationDate":"2020/10/1",
         "sparePart":1,"calibrationSupplier":"上海测试研究院","toolSpecification":"(0-10)mm","procurementPrice":"¥300.00"
         },
-        {"deviceNo":"0006","deviceName":"百分表2","status":"校准中","manufacture":"重庆成量工具集团",
+        {"id":"6","deviceNo":"0006","deviceName":"百分表2","status":"校准中","manufacture":"重庆成量工具集团",
         "located":"重庆2","nextMaintenanceDate":"2020/8/1","nextCalibrationDate":"2020/10/1",
         "sparePart":1,"calibrationSupplier":"北京测试研究院","toolSpecification":"(0-10)mm","procurementPrice":"¥300.00"
         }
@@ -43,6 +43,20 @@ var vTableData={
             "deviceNo": {"0005":"0005","0006":"0006"}
         } 
  };
+ 
+ var setting = {
+    view: { 
+        selectedMulti: false
+    }, 
+    data: {
+        simpleData: {
+            enable: true
+        },
+        key: {
+            id: 'id'
+        }
+    } 
+};
 
  /**
   * 设备明细
