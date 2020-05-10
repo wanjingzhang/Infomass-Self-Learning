@@ -12,7 +12,8 @@ Steps:
 ----
 1. Create two different areas, one for the header of the table, and one for the container of the dragging elements.
 1. Achieve the head of table sort function. User can drag the corresponding element to the position who want.
-1. Add the tree structure firstly. 
+1. Add the tree structure firstly, add the tree structure, add the data to the node, add the display button for the tree to show/hid the table. 
+1. Add the DIY NODE div for the data.
 
 
 

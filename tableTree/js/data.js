@@ -44,19 +44,7 @@ var vTableData={
         } 
  };
  
- var setting = {
-    view: { 
-        selectedMulti: false
-    }, 
-    data: {
-        simpleData: {
-            enable: true
-        },
-        key: {
-            id: 'id'
-        }
-    } 
-};
+ 
 
  /**
   * 设备明细

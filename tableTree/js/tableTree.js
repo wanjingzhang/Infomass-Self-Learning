@@ -1,4 +1,19 @@
 var tableTree = function () {
+    var setting = {
+        view: { 
+            addDiyDom: addDiyDom,
+            selectedMulti: false
+        }, 
+        data: {
+            simpleData: {
+                enable: true
+            },
+            key: {
+                id: 'id'
+            }
+        } 
+    };
+    
     var tableH = document.getElementById('tableH');
     var cFilter = document.getElementById('filterC');
     var tableC = document.getElementById('tableC'); 
@@ -110,6 +125,42 @@ var tableTree = function () {
         var obj = JSON.parse(str);
         console.log(obj);
         $.fn.zTree.init($('#treeData'), setting, obj);//zNodes
+
+        $(".showData").click(function(){ 
+            if($(this).hasClass("hide")){
+                $(this).removeClass("hide");
+                $(this).addClass("show");
+                $(this).parent().next().show();
+            }else{
+                $(this).addClass("hide");
+                $(this).removeClass("show");
+                $(this).parent().next().hide();
+            } 
+        });  
+    }
+
+    /**
+     * 添加自定义数据集合到节点
+     */
+    function addDiyDom(treeId, treeNode){
+        if(treeNode.nodeType != 2)return;
+        var aObj = $("#" + treeNode.tId + "_a");
+        var aSpan = $("#" + treeNode.tId + "_span");
+        aSpan.after("<span class='button showData show' id='addBtn_" + treeNode.tId + "' title='add node' onfocus='this.blur();'></span>");
+        // if ($("#addBtn_"+treeNode.id).length>0) return;
+        // 添加子table
+        var addStr = '<div class="tableC" id="tableC">';
+        for(var i = 0; i < data.length; i++){
+            addStr += '<div class="element">'
+            // 遍历头部数据 动态填充表格
+            for(var j in headers){
+                addStr += '<div class="el" style="width:'+ widthPercent[j] +'%">' + data[i][headers[j].key] + '</div>'; 
+            }
+            addStr += '</div>'
+        }
+        addStr += '</div>'
+        
+        aObj.after(addStr);
     }
 
     /**
