@@ -11,8 +11,17 @@ When user drags the header of the table to the filter area:
 Steps:
 ----
 1. Create two different areas, one for the header of the table, and one for the container of the dragging elements.
-2. Achieve the head of table sort function. User can drag the corresponding element to the position who want.
+1. Achieve the head of table sort function. User can drag the corresponding element to the position who want.
+1. Add the tree firstly.
+1. filters the data
 
+
+
+Reference:
+----
+1. [使用递归遍历并转换树形数据，](https://segmentfault.com/a/1190000011819279) 树的遍历（广度、深度）
+1. [非常好的封装方法](https://blog.csdn.net/zhaochanglong/article/details/8843818)
+1. [Group by](https://segmentfault.com/a/1190000011201544)
 
 
 
