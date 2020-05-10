@@ -36,9 +36,7 @@ var tableTree = function () {
         for(var k=0; k< filters.length;k++){  
             type.push(filters[k].key); 
             zNodeConfig += '{"name":"'+ type[0] +'", "open":true, "nodeType": "1", "children":[';
-
-            
-
+ 
             if(k == 0){ 
                 obj = filterData[type[k]]; 
                 for(var i in obj){
@@ -47,7 +45,17 @@ var tableTree = function () {
                             return true;
                         }
                     })
-                    zNodeConfig += '{"name":"'+ i +'", "nodeType": "2"},' 
+                    zNodeConfig += '{"name":"'+ i +'", "nodeType": "2"';
+                    if(obj[i]){
+                        zNodeConfig += ', "data":['
+                        for(var j in obj[i]){
+                            zNodeConfig += JSON.stringify(obj[i][j]) + ',';
+                        }
+                        zNodeConfig = zNodeConfig.substring(0,zNodeConfig.length-1);
+                        zNodeConfig += ']'
+                    }
+                    
+                    zNodeConfig += '},'; 
                 }  
                 zNodeConfig = zNodeConfig.substring(0,zNodeConfig.length-1);
                 zNodeConfig += ']}';
@@ -94,9 +102,7 @@ var tableTree = function () {
         console.log(str);
         // [
         //     {'name':'网站导航', open:true, children: [
-        //         { 'name':'google', 'url':'http://g.cn', 'target':'_blank'},
-        //         { 'name':'baidu', 'url':'http://baidu.com', 'target':'_blank'},
-        //         { 'name':'sina', 'url':'http://www.sina.com.cn', 'target':'_blank'}
+        //         { 'name':'google', 'url':'http://g.cn', 'target':'_blank'}
         //         ]
         //     }
         // ];
