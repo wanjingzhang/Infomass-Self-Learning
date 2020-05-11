@@ -50,7 +50,7 @@ var tableTree = function () {
 
         for(var k=0; k< filters.length;k++){  
             type.push(filters[k].key); 
-            zNodeConfig += '{"name":"'+ type[0] +'", "open":true, "nodeType": "1", "children":[';
+            zNodeConfig += '{"name":"'+ filters[k].value +'", "open":true, "nodeType": "1", "children":[';
  
             if(k == 0){ 
                 obj = filterData[type[k]]; 
@@ -150,11 +150,11 @@ var tableTree = function () {
         // if ($("#addBtn_"+treeNode.id).length>0) return;
         // 添加子table
         var addStr = '<div class="tableC" id="tableC">';
-        for(var i = 0; i < data.length; i++){
+        for(var i = 0; i < treeNode.data.length; i++){
             addStr += '<div class="element">'
             // 遍历头部数据 动态填充表格
             for(var j in headers){
-                addStr += '<div class="el" style="width:'+ widthPercent[j] +'%">' + data[i][headers[j].key] + '</div>'; 
+                addStr += '<div class="el" style="width:'+ widthPercent[j] +'%">' + treeNode.data[i][headers[j].key] + '</div>'; 
             }
             addStr += '</div>'
         }

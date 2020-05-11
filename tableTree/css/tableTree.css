@@ -209,17 +209,20 @@
 /* 表格内容 */
 .tableC{
     overflow: hidden;
-    margin-top: -4px;
-}
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    margin: 0px 0px 10px 40px !important;
+} 
 .element{
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc; 
     padding: 5px 0;
 }
 
 .el{
-    display:inline-block;
+    display: inline-block;
     text-align: center;
     position: relative;
+    padding: 10px 0px !important; 
 }
 
 .el:after {
