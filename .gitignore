@@ -53,3 +53,15 @@ tableTree/zTreeStyle/js/._jquery.ztree.core.js
 tableTree/zTreeStyle/js/._jquery.ztree.excheck.js
 tableTree/zTreeStyle/js/._jquery.ztree.exedit.js
 ._.gitignore
+configTree/._index.html
+configTree/._zTreeStyle
+configTree/zTreeStyle/._img
+configTree/zTreeStyle/._zTreeStyle.css
+configTree/zTreeStyle/img/._diy
+configTree/zTreeStyle/img/._line_conn.gif
+configTree/zTreeStyle/img/._loading.gif
+configTree/zTreeStyle/img/._zTreeStandard.gif
+configTree/zTreeStyle/img/._zTreeStandard.png
+._
+._*.png
+._*.js

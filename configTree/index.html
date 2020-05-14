@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="zTreeStyle/zTreeStyle.css" type="text/css">
+    <script type="text/javascript" src="zTreeStyle/js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="zTreeStyle/js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="zTreeStyle/js/jquery.ztree.excheck.js"></script>
+    <script type="text/javascript" src="zTreeStyle/js/jquery.ztree.exedit.js"></script>
+    <script type="text/javascript" src="zTreeStyle/js/dropData.js"></script>
+    
+    <style type="text/css">
+        .ztree li a.copy {
+            padding-top: 0;
+            background-color: #316AC5;
+            color: white;
+            border: 1px #316AC5 solid;
+        }
+
+        .ztree li a.cut {
+            padding-top: 0;
+            background-color: silver;
+            color: #111;
+            border: 1px #316AC5 dotted;
+        }
+
+        .ztree li span.button.add{
+            background-position: -145px 0;
+        }
+
+        #treeConfig{
+            width: 300px;
+            height: 600px;
+            overflow: auto;
+        }
+
+        /* 右键 */
+        div#rMenu {
+            position: absolute;
+            visibility: hidden;
+            top: 0;
+            background-color: #ccc;
+            text-align: left;
+            padding: 1px;
+            width: auto;
+        }
+        div#rMenu ul li{
+            padding: 0 5px;
+            cursor: pointer;
+            list-style: none outside none;
+            background-color: #DFDFDF;
+            border-bottom: 1px solid #ccc;
+        }
+        div#rMenu ul{
+            padding: 0;
+            margin: 0; 
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="content_wrap">
+        <div class="ztreeConfigBackground left">
+            <ul id="treeConfig" class="ztree"></ul> 
+        </div> 
+        <!-- 右键菜单 对 [命令节点] 或 [characteristic] 的操作 Start -->
+        <div id="rMenu">
+            <ul> 
+                <li id="m_copy" onclick="copyTreeNode();">复制</li>
+                <li id="m_cut" onclick="cutTreeNode();">剪贴</li>
+                <li id="m_paste" onclick="pasteTreeNode();">粘贴</li>
+                <li id="m_insert" onclick="insertTreeNode();">插入</li>  
+            </ul>
+        </div>
+        <!-- 右键菜单 End -->
+    </div>
+
+    [ <a id="copy" href="#" title="复制" onclick="return false;">复制</a> ]
+    [ <a id="cut" href="#" title="剪切" onclick="return false;">剪切</a> ]
+    [ <a id="paste" href="#" title="粘贴" onclick="return false;">粘贴</a> ] 
+ 
+    <a id="uploadData" href="#" title="上传数据" onclick="return false;">上传数据</a> ]
+    <a id="moveUp">上移</a>
+    <a id="moveDown">下移</a>
+
+    <form method="post">
+        <select id="ordersType" onchange="alter(this.value)"></select>
+        <div class="orderTabs" id="cmd_Undefined"></div>
+        <div class="orderTabs" id="cmd_Locate">
+            <select id="Locate_next"></select>
+            <select id="Locate_is"></select>
+            <select id="Locate_type"></select>
+            <select id="Locate_times"></select>
+            <select id="Locate_constrain"></select>
+        </div>
+        <div class="orderTabs" id="cmd_Moveto">
+            <select id="Moveto_next"></select>
+            <select id="Moveto_line"></select>
+            <select id="Moveto_times"></select>
+            <select id="Moveto_constrain"></select>
+        </div>
+        <div class="orderTabs" id="cmd_Goto">
+            <select id="Goto_begin"></select>
+            <select id="Goto_line"></select>
+        </div>
+        <div class="orderTabs" id="cmd_Searchfor">
+            <select id="Searchfor_next"></select>
+            <select id="Searchfor_string"></select>
+            <input id="Searchfor_input" type="text" />
+            <select id="Searchfor_times"></select>
+            <select id="Searchfor_ignoreCase"></select>
+            <select id="Searchfor_constrain"></select>
+            <select id="Searchfor_anyChartPosition"></select>
+        </div>
+        <div class="orderTabs" id="cmd_Mark">
+            <select id="Mark_currentPosition"></select>
+        </div>
+        <div class="orderTabs" id="cmd_Must">
+            <select id="Must_is"></select>
+            <select id="Must_alpha"></select>
+        </div>
+        <div class="orderTabs" id="cmd_Assign">
+            <input id="Assign_input" type="text" />
+        </div>
+        <button id='runCommit' type="button">执行</button>
+    </form>
+
+    
+
+    <script>
+        // list
+        var ordersType = document.getElementById('ordersType');
+
+        /*
+        * 绑定命令type改变事件
+        **/
+        function alter(index) {
+            //显示相应的选择项
+            ordersType.index = index;
+            $(".orderTabs").hide();
+            $("#cmd_" + index).show();
+        }
+
+        /*
+        * 显示二级菜单
+        * obj = null 初始化 
+        * obj != null 传入data 
+        **/
+        var initSecond = function (type, obj = null) {
+            if (obj == null) {
+                // 绑定初始值   
+                var props = "";
+                // 开始遍历
+                for (var p in commondList[type]) {
+                    // 方法
+                    if (typeof (commondList[type][p]) !== "function") {
+                        // p 为属性名称，obj[p]为对应属性的值
+                        // console.log( p + "=" + commondList[type][p] + "\t"); 
+                        if (p != "input") {
+                            for (var i = 0; i < commondList[type][p].length; i++) {
+                                $("#" + type + "_" + p).append('<option value="' + commondList[type][p][i] + '">' + commondList[type][p][i] + '</option>');
+                            }
+                        } else {
+                            // input 
+                        }
+                    }
+                }
+            }
+            else {
+                // 设置根节点 内容
+                $("#ordersType").val(type);
+                if (type == Undefined.name) {
+                    return;
+                } else {
+                    // 遍历obj，动态插入数据
+                    for (var i in obj) {
+                        if (i != "objType") {
+                            $("#" + type + "_" + i).val(obj[i]);
+                        }
+                    }
+                }
+            }
+        }
+
+        /*
+        * commit 执行保存语句结构
+        **/
+        function onCommit(e) {
+            // 获取当前的语句类型
+            var type = $("#ordersType option:selected").text();
+            var val = $("#ordersType option:selected").val();
+            var obj = new classList[typeList[val]];
+
+            // 开始遍历
+            for (var p in commondList[type]) {
+                // 方法
+                if (typeof (commondList[type][p]) !== "function") {
+                    // p 为属性名称，obj[p]为对应属性的值 
+                    if (p != "input") {
+                        obj[p] = $("#" + type + "_" + p + " option:selected").val();
+                    } else {
+                        obj[p] = $("#" + type + "_" + p).val();
+                    }
+                }
+            }
+
+            // 单击执行 保存数据到 zTree ++++
+            // 获取选中节点 修改其data
+
+            var str = JSON.stringify(obj);
+            console.log(str);
+
+            // 找到树节点 替换data
+            var zTree = $.fn.zTree.getZTreeObj("treeConfig"),
+                nodes = zTree.getSelectedNodes(),
+                treeNode = nodes[0];
+            if (nodes.length == 0) {
+                alert("请先选择一个节点");
+                zTree.cancelSelectedNode();
+                return;
+            } else {
+                // 更新节点
+                nodes[0].name = obj.objType;
+                nodes[0].data = str;
+                // console.table(nodes);
+                zTree.updateNode(nodes[0]);
+                // console.table(nodes);
+            }
+        }
+
+        /*
+           * 初始化语句命令列表
+           **/
+        var initCmd = function () {
+            //指定指令的个数
+            ordersType.length = commondList.Types.length;
+            //把数组数据写入<option>标记中
+            for (var i = 0; i < ordersType.length; i++) {
+                ordersType.options[i].text = commondList.Types[i];
+                ordersType.options[i].value = commondList.Types[i];
+            }
+            //设置指令列表默认选项 为Locate
+            var index = 0;
+            ordersType.index = index;
+
+            // 初始化所有二级菜单 数据
+            for (var i in typeList) {
+                initSecond(i, null);
+            }
+            // 初始化所有类型的tab
+            $(".orderTabs").hide();
+
+            // 添加执行事件
+            $("#runCommit").click(onCommit);
+        }();
+
+    </script>
+ 
+    <script type="text/javascript">
+        var setting = {
+            view: {
+                addDiyDom: addDiyDom,
+                removeHoverDom: removeHoverDom, 
+                selectedMulti: false,
+                dblClickExpand: false
+            },
+            edit: {
+                enable: true,
+                showRenameBtn: showRenameBtn,
+                showRemoveBtn: showRemoveBtn
+            },
+            data: {
+                simpleData: {
+                    enable: true
+                },
+                key: {
+                    id: 'id'
+                }
+            },
+            callback: {
+                onClick: onClickNode,
+                beforeRemove: beforeRemove,
+                onRemove: onRemove,
+                beforeDrop: onBeforeDrop,
+                onRightClick: OnRightClick
+            }
+        };
+
+        var testLocate = new Locate("previous", "is", "label", "3", "do not constrain");
+
+        // 整个Config文件
+        var zNodeConfig = [{
+            name: "Config A", open: true, nodeType: '3', noR:true,
+            children: [
+                {
+                    name: "Header", open: true, nodeType: '3',noR:true,
+                    children:
+                        [{
+                            name: "Instructions", open: true, nodeType: '1',noR:true,
+                            children:
+                                [{ name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                { name: "Locate", data: JSON.stringify(testLocate), nodeType: '0' },
+                                { name: "Moveto", data: JSON.stringify(new Moveto()), nodeType: '0' },
+                                { name: "Goto", data: JSON.stringify(new Goto()), nodeType: '0' },
+                                { name: "Searchfor", data: JSON.stringify(new Searchfor()), nodeType: '0' },
+                                { name: "Mark", data: JSON.stringify(new Mark()), nodeType: '0' },
+                                { name: "Must", data: JSON.stringify(new Must()), nodeType: '0' },
+                                { name: "Assign", data: JSON.stringify(new Assign()), nodeType: '0' }
+                                ]
+                        },
+                        {
+                            name: "Characteristics", open: true, nodeType: '4',
+                            children:
+                                [{
+                                    name: "Characteristic", open: true, nodeType: '2',noR:true,
+                                    children:[
+                                        {name: "Instructions", open: true, nodeType: '1',noR:true,
+                                            children:
+                                            [{ name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                            { name: "Moveto", data: JSON.stringify(new Moveto()), nodeType: '0' },
+                                            { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                            { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                            { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' }]
+                                        }
+                                    ]
+                                    
+                                }]
+                        }]
+                },
+                {
+                    name: "Footer", open: true, nodeType: '3',noR:true,
+                    children:
+                        [{
+                            name: "Instructions", open: true, nodeType: '1',noR:true,
+                            children:
+                                [{ name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' }]
+                        },
+                        {
+                            name: "Characteristics", open: true, nodeType: '4',
+                            children:
+                                [{
+                                    name: "Characteristic", open: true, nodeType: '2',noR:true,
+                                    children:[
+                                        {name: "Instructions", open: true, nodeType: '1',noR:true,
+                                            children:
+                                            [{ name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                            { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                            { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                            { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                            { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' }]
+                                        }
+                                    ]
+                                    
+                                }]
+                        }]
+                },
+                {
+                    name: "Features", open: true, click: false, nodeType: '3',noR:true,
+                    children:
+                        [{
+                            name: "Instructions", open: true, nodeType: '1',noR:true,
+                            children:
+                                [{ name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' }]
+                        },
+                        {
+                            name: "Characteristics", open: true, nodeType: '4',
+                            children:
+                                [{
+                                    name: "Characteristic", open: true, nodeType: '2',noR:true,
+                                    children:[
+                                        {name: "Instructions", open: true, nodeType: '1',noR:true,
+                                            children:
+                                            [{ name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                            { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                            { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                            { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' },
+                                            { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: '0' }]
+                                        }
+                                    ] 
+                                }]
+                        }]
+                },
+            ]
+        }];
+
+        var zTree, rMenu;
+
+        /**
+         * 鼠标右键操作
+         * 
+        */
+        function OnRightClick(event, treeId, treeNode) {
+			if (!treeNode && event.target.tagName.toLowerCase() != "button" && $(event.target).parents("a").length == 0) {
+				zTree.cancelSelectedNode();
+				showRMenu("root", event.clientX, event.clientY);
+			} else if (treeNode && !treeNode.noR) {
+				zTree.selectNode(treeNode);
+				showRMenu("node", event.clientX, event.clientY);
+            } 
+        }
+        
+        // 添加滚动事件
+        $("#treeConfig").scroll(function(){
+            $("#rMenu ul").hide(); 
+        })
+
+		function showRMenu(type, x, y) { 
+			if (type=="root") {
+				$("#rMenu ul").hide();
+			} else {
+				$("#rMenu ul").show();
+			}
+
+            // y -= $("#treeConfig").scrollTop();
+            // x += $("#treeConfig").scrollLeft(); 
+
+            // console.table("scrollTop:" + document.body.scrollTop , "scrollLeft:" +document.body.scrollLeft);
+            // console.log("#treeConfig. scroll Top:" + $("#treeConfig").scrollTop());
+            rMenu.css({"top":y+"px", "left":x+"px", "visibility":"visible"});
+
+			$("body").bind("mousedown", onBodyMouseDown);
+		}
+		function hideRMenu() {
+			if (rMenu) rMenu.css({"visibility": "hidden"});
+			$("body").unbind("mousedown", onBodyMouseDown);
+		}
+		function onBodyMouseDown(event){
+			if (!(event.target.id == "rMenu" || $(event.target).parents("#rMenu").length>0)) {
+				rMenu.css({"visibility" : "hidden"});
+			}
+		}
+
+        function onBeforeDrop(treeId, treeNodes, targetNode, moveType) {
+            var moveNode = treeNodes[0];
+            switch (moveType)
+            {
+                case "prev":
+                case "next":
+                    if (moveNode.parentTId == targetNode.parentTId) {
+                        return true;
+                    }
+                    break; 
+            }
+            return false;
+        }
+
+        /*
+        * 单击节点事件  ++++
+        */
+        function onClickNode(event, treeId, treeNode, clickFlag) {
+            // 找到树节点 替换data
+            var zTree = $.fn.zTree.getZTreeObj("treeConfig"),
+                nodes = zTree.getSelectedNodes(),
+                treeNode = nodes[0];
+            if (nodes.length == 0) {
+                alert("请先选择一个节点");
+                zTree.cancelSelectedNode();
+                return;
+            }
+
+            // console.table(nodes);
+
+            switch (nodes[0].nodeType) {
+                case "0":
+                    // 获取当前数据对象 读取到dropdow list 
+                    var obj = JSON.parse(treeNode.data);
+                    $(".orderTabs").hide();
+                    $("#cmd_" + obj.objType).show();
+                    initSecond(obj.objType, obj);
+                    console.log("click the child : 0");
+                    break;
+                case "1":
+                    console.log("click the parent : 1");
+                    break;
+                case "2":
+                    console.log("click the Lab : 2");
+                    break;
+                case "3":
+                    console.log("click the Fixed : 3");
+                    break;
+            }
+
+        }
+
+        //是否显示编辑按钮
+        function showRenameBtn(treeId, treeNode) {
+            //获取节点所配置的noEditBtn属性值 
+            if (treeNode.nodeType == "2" ) { //只有Label可以编辑名称
+                return true;
+            } else {
+                return false;
+            }
+        }
+        //是否显示删除按钮
+        function showRemoveBtn(treeId, treeNode) {
+            //获取节点所配置的noRemoveBtn属性值
+            if (treeNode.nodeType == "0" || treeNode.nodeType == "2") { //只有叶子可以删除，和Label
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function showCode(str) {
+            var code = $("#code");
+            code.empty();
+            for (var i = 0, l = str.length; i < l; i++) {
+                code.append("<li>" + str[i] + "</li>");
+            }
+        }
+
+        $(document).ready(function () {
+            $.fn.zTree.init($("#treeConfig"), setting, zNodeConfig);//zNodes
+            zTree = $.fn.zTree.getZTreeObj("treeConfig");
+            rMenu = $("#rMenu");
+
+            $("#copy").bind("click", copy);
+            $("#cut").bind("click", cut);
+            $("#paste").bind("click", paste);
+
+            $("#moveUp").bind("click",moveUp);
+            $("#moveDown").bind("click",moveDown);
+            $("#uploadData").bind("click", uploadData);
+        });
+
+        /*
+        * 上传数据
+        *
+        * */
+        function uploadData(e) {
+            // 遍历整棵树的data和结构
+            var str = ZtreeToJson("treeConfig");
+            console.log(str);
+        }
+
+        /*
+        * 遍历树结构 返回json数据格式
+        *
+        * */
+        function ZtreeToJson(treeid) {
+            //ztree遍历所有节点
+            var treeObj = $.fn.zTree.getZTreeObj(treeid);
+            var node = treeObj.getNodes(); //可以获取所有的父节点
+            var nodes = treeObj.transformToArray(node); //获取树所有节点
+
+            var c = nodes.length;
+            var treeArr = [];
+
+            for (var i = 0; i < c; i++) {
+                var node = nodes[i];
+                node.id = i;
+            }
+
+            for (var i = 0; i < c; i++) {
+                var node = nodes[i];
+                var pnode = node.getParentNode();
+                var tree = {};
+                if (pnode) {
+                    tree.pid = pnode.id;
+                    tree.id = node.id;
+                    tree.level = node.level;
+                    tree.name = node.name;
+                    tree.pname = pnode.name;
+                    tree.data = node.data;
+                    treeArr.push(tree);
+                } else {
+                    tree.pid = -1;
+                    tree.id = node.id;
+                    tree.level = node.level;
+                    tree.name = node.name;
+                    tree.pname = 'null';
+                    treeArr.push(tree);
+                }
+            }
+            return JSON.stringify(treeArr);
+        }
+
+        var newCount = 1;
+        function addHoverDom(treeId, treeNode) {
+            // 如果是子节点不可以添加,只有当节点类型为 Characteristics 和 Instructions
+            if(treeNode.nodeType == "1" || treeNode.nodeType == "4" ){
+                var sObj = $("#" + treeNode.tId + "_span");
+                if (treeNode.editNameFlag || $("#addBtn_" + treeNode.tId).length > 0) return;
+                var addStr = "<span class='button add' id='addBtn_" + treeNode.tId
+                    + "' title='add node' onfocus='this.blur();'>ABCAA</span>";
+                sObj.after(addStr);
+                var btn = $("#addBtn_" + treeNode.tId);
+
+                if (btn) btn.bind("click", function () {
+                    var zTree = $.fn.zTree.getZTreeObj("treeConfig"),
+                    nodes = zTree.getSelectedNodes(); 
+                    // 获取当前选中的node  
+                    if (nodes.length == 0) {
+                        alert("请先选择一个节点");
+                        zTree.cancelSelectedNode();
+                        return;
+                    } 
+                    
+                    // 如果是Instructions 需要添加节点 
+                    if( nodes[0].nodeType == "1" ){
+                       zTree.addNodes(nodes[0], { name: "Undefined", data: JSON.stringify(new Undefined()), nodeType: "0" }); 
+                    }
+
+                    // 如果是Characteristics 需要添加节点列表 Characteristic
+                    if( nodes[0].nodeType == "4" ){
+                       zTree.addNodes(nodes[0], characteristicNode(nodes[0].children.length)); 
+                    }
+                    
+                    zTree.cancelSelectedNode();
+                    return false;
+                });
+            }
+            
+        };
+
+        function addDiyDom (treeId, treeNode){
+            // if (treeNode.level>0) return;
+			var aObj = $("#" + treeNode.tId + "_a");
+			if ($("#addBtn_"+treeNode.id).length>0) return;
+			var addStr = "<span >a</span>";
+			aObj.after(addStr);
+			var first = $("#firstBtn_"+treeNode.id);
+			var prev = $("#prevBtn_"+treeNode.id);
+			var next = $("#nextBtn_"+treeNode.id);
+			var last = $("#lastBtn_"+treeNode.id);
+			treeNode.maxPage = Math.round(treeNode.count/treeNode.pageSize - .5) + (treeNode.count%treeNode.pageSize == 0 ? 0:1);
+			first.bind("click", function(){
+				if (!treeNode.isAjaxing) {
+					goPage(treeNode, 1);
+				}
+			});
+			last.bind("click", function(){
+				if (!treeNode.isAjaxing) {
+					goPage(treeNode, treeNode.maxPage);
+				}
+			});
+			prev.bind("click", function(){
+				if (!treeNode.isAjaxing) {
+					goPage(treeNode, treeNode.page-1);
+				}
+			});
+			next.bind("click", function(){
+				if (!treeNode.isAjaxing) {
+					goPage(treeNode, treeNode.page+1);
+				}
+			});
+        }
+
+        function removeHoverDom(treeId, treeNode) {
+            $("#addBtn_" + treeNode.tId).unbind().remove();
+        };
+
+        /*
+        * 剪贴、复制、粘贴节点
+        *
+        */
+        function fontCss(treeNode) {
+            var aObj = $("#" + treeNode.tId + "_a");
+            aObj.removeClass("copy").removeClass("cut");
+            if (treeNode === curSrcNode) {
+                if (curType == "copy") {
+                    aObj.addClass(curType);
+                } else {
+                    aObj.addClass(curType);
+                }
+            }
+        }
+
+        var curSrcNode, curType, curNodeType;
+        function setCurSrcNode(treeNode) {
+            var zTree = $.fn.zTree.getZTreeObj("treeConfig");
+            if (curSrcNode) {
+                delete curSrcNode.isCur;
+                var tmpNode = curSrcNode;
+                curSrcNode = null;
+                fontCss(tmpNode);
+            }
+            curSrcNode = treeNode;
+            if (!treeNode) return;
+
+            curSrcNode.isCur = true;
+            zTree.cancelSelectedNode();
+            fontCss(curSrcNode);
+        }
+        /*
+        *  复制功能
+        */
+        function copy(e) {
+            var zTree = $.fn.zTree.getZTreeObj("treeConfig"),
+                nodes = zTree.getSelectedNodes();
+            if(nodes[0].nodeType == "2" || nodes[0].nodeType == "0"){ // 只有Label child 才可以复制
+                if (nodes.length == 0) {
+                    alert("请先选择一个节点");
+                    zTree.cancelSelectedNode();
+                    return;
+                }
+                curType = "copy";
+                curNodeType = nodes[0].nodeType;
+                setCurSrcNode(nodes[0]);
+                console.log("copy successful.");
+            }
+            
+        }
+
+        /*
+        *  剪贴功能
+        */
+        function cut(e) { 
+            var zTree = $.fn.zTree.getZTreeObj("treeConfig"),
+                nodes = zTree.getSelectedNodes();
+            if(nodes[0].nodeType == "2" || nodes[0].nodeType == "0"){
+                // 如果当前是 Characteristic或者是child 可以支持剪贴， 
+                if (nodes.length == 0) {
+                    alert("请先选择一个节点"); 
+                    zTree.cancelSelectedNode();
+                    return;
+                }
+                curType = "cut";
+                curNodeType = nodes[0].nodeType;
+                setCurSrcNode(nodes[0]);
+                console.log('cut successful.');
+            }else{
+                alert("不支持删除节点！"); 
+            }    
+        }
+        function paste(e) { 
+            // if (!curSrcNode) {
+            //     alert("请先选择一个节点进行 复制 / 剪切");
+            //     return;
+            // }
+            var zTree = $.fn.zTree.getZTreeObj("treeConfig"),
+                nodes = zTree.getSelectedNodes(),
+                targetNode = nodes.length > 0 ? nodes[0] : null;
+                
+            if(nodes[0].nodeType == "4" || nodes[0].nodeType == "1"){ // 粘贴Lable组信息
+                if (curSrcNode === targetNode) {
+                    alert("不能移动，源节点 与 目标节点相同");
+                    return;
+                } else if (curType === "cut" && ((!!targetNode && curSrcNode.parentTId === targetNode.tId) || (!targetNode && !curSrcNode.parentTId))) {
+                    alert("不能移动，源节点 已经存在于 目标节点中");
+                    return;
+                } else if (curType === "copy") { 
+                    
+                    // 判断当前复制节点的类型
+                    if(curNodeType == "2" && nodes[0].nodeType == "4"){
+                        // 如果当前节点是Characteristic 2 那么只能粘贴characteristics 4 树
+                        targetNode = zTree.copyNode(targetNode, curSrcNode, "inner");
+                    }else if(curNodeType == "0" && nodes[0].nodeType == "1"){
+                        // 如果当前节点是child 0 那么只能粘贴到 Instructions 1 节点
+                        targetNode = zTree.copyNode(targetNode, curSrcNode, "inner");
+                    } 
+                } else if (curType === "cut") {
+                    // 判断当前剪贴节点的类型
+                    if(curNodeType == "2" && nodes[0].nodeType == "4"){
+                        // 如果当前节点是Characteristic 2 那么只能粘贴characteristics 4 树
+                        targetNode = zTree.moveNode(targetNode, curSrcNode, "inner"); 
+                    }else if(curNodeType == "0" && nodes[0].nodeType == "1"){
+                        // 如果当前节点是child 0 那么只能粘贴到 Instructions 1 节点
+                        targetNode = zTree.moveNode(targetNode, curSrcNode, "inner");
+                    }
+                    
+                    if (!targetNode) {
+                        alert("剪切失败，源节点是目标节点的父节点");
+                    }
+                    targetNode = curSrcNode;
+                } 
+                setCurSrcNode();
+                delete targetNode.isCur;
+                zTree.selectNode(targetNode);
+                zTree.cancelSelectedNode();
+
+                console.log("paste successful.");
+            } 
+        }
+
+        /*
+        * 删除、新增
+        */
+        function beforeRemove(treeId, treeNode) {
+            console.table(treeNode);
+            console.log(treeNode.nodeType);
+            if (treeNode.nodeType == '0') {
+                return confirm("确认删除 节点 -- " + treeNode.name + " 吗？");
+            }
+            else {
+                return;
+            }
+        }
+        function onRemove(e, treeId, treeNode) {
+            var zTree = $.fn.zTree.getZTreeObj("treeConfig"),
+                nodes = zTree.getSelectedNodes(),
+                treeNode = nodes[0];
+            if (treeNode.nodeType == '0') {
+                var callbackFlag = $("#callbackTrigger").attr("checked");
+                zTree.removeNode(treeNode, callbackFlag);
+            }
+        }
+        function moveUp(){ 
+            // 获取当前节点类型 为命令的可以下一步 
+            var zTree = $.fn.zTree.getZTreeObj("treeConfig"),
+                nodes = zTree.getSelectedNodes(),
+                treeNode = nodes[0];
+            if (nodes.length == 0) {
+                alert("请先选择一个节点");
+                zTree.cancelSelectedNode();
+                return;
+            } else if (nodes[0].nodeType == "0" && !nodes[0].isFirstNode) {
+                // 判断不是第一个节点 才可以向上移动
+
+                // 查到前一个节点 
+                var p = nodes[0].getPreNode(); 
+                // 位置互换
+                zTree.moveNode(p,nodes[0],"prev"); 
+                console.log("moveUp"); 
+            }
+ 
+        }
+        function moveDown(){ 
+            // 获取当前节点类型 为命令的可以下一步 
+            var zTree = $.fn.zTree.getZTreeObj("treeConfig"),
+                nodes = zTree.getSelectedNodes() ;
+            if (nodes.length == 0) {
+                alert("请先选择一个节点");
+                zTree.cancelSelectedNode();
+                return;
+            } else if (nodes[0].nodeType == "0" && !nodes[0].isLastNode) {
+                // 判断不是最后一个节点 才可以向下移动  
+                // 查找下一个节点 
+                var p = nodes[0].getNextNode(); 
+                // 位置互换
+                zTree.moveNode(p,nodes[0],"next"); 
+                console.log("moveDown");
+            }
+        }
+ 
+    </script>
+</body>
+
+</html>
