@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/wanjingzhang/Infomass-Self-Learning#readme",
   "dependencies": {
+    "grunt-contrib-uglify": "^4.0.1"
+  },
+  "devDependencies": {
     "grunt": "^1.1.0"
   }
 }
