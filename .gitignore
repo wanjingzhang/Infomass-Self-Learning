@@ -65,3 +65,11 @@ configTree/zTreeStyle/img/._zTreeStandard.png
 ._
 ._*.png
 ._*.js
+
+
+
+# Dependency directories
+node_modules/
+node_modules
+jspm_packages/
+ 
