@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Document</title>
+
+<style type="text/css">
+
+body {
+
+margin: 0;
+
+}
+
+#wrap {
+
+margin: 50px auto;
+
+position: relative;
+
+border: 1px solid #000;
+
+width: 600px;
+
+height: 500px;
+
+} 
+
+#div {
+
+position: absolute;
+
+left: 0;
+
+top: 0;
+
+width: 100px;
+
+height: 100px;
+
+background: red;
+
+cursor: move;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="wrap">
+
+<div id="div">文字</div>
+
+</div>
+
+<script type="text/javascript">
+
+(function(){
+
+var div = document.querySelector('#div');
+
+var maxX = div.offsetParent.clientWidth - div.offsetWidth;
+
+var maxY = div.offsetParent.clientHeight - div.offsetHeight;
+
+div.addEventListener('mousedown', function(e) {
+
+e.preventDefault();
+
+var start = {x: e.clientX,y: e.clientY};
+
+var elOffset = {x: div.offsetLeft,y: div.offsetTop};
+
+document.addEventListener('mousemove', move);
+
+document.addEventListener('mouseup', end);
+
+function move(e){
+
+var dis  = {x:e.clientX - start.x,y:e.clientY - start.y};
+
+var x = dis.x + elOffset.x;
+
+var y = dis.y + elOffset.y;
+
+/* 左侧磁性吸附 */
+
+x = x<0?0:(x>maxX?maxX:x);
+
+ 
+
+y = y<0?0:(y>maxY?maxY:y);
+
+console.log(x);
+
+div.style.left = x + "px";
+
+div.style.top = y + "px";
+
+}
+
+function end(e){
+
+document.removeEventListener('mousemove', move);
+
+document.removeEventListener('mouseup', end);
+
+var dis  = {x:e.clientX - start.x,y:e.clientY - start.y};
+
+var x = dis.x + elOffset.x;
+
+var y = dis.y + elOffset.y;
+
+/* 左侧磁性吸附 */
+
+x = x<100?0:(x>maxX?maxX:x);
+
+/* 上边磁性吸附 */
+
+y = y<100?0:(y>maxY?maxY:y);
+
+console.log(x);
+
+div.style.left = x + "px";
+
+div.style.top = y + "px";
+
+}
+
+});
+
+})(); 
+
+</script>
+
+</body>
+
+</html>
