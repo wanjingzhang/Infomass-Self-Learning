@@ -12,28 +12,28 @@ const relativeLine = {
         var self = this
           , parentPosition = $('#draw').offset();
         $('.tablePannel').on('mousedown', 'li', function(e) {
-        let current = self.lineArr.find(el=>{
-            return el.beginValue == $(this).attr('data-question');
-        }
-        );
-        current.begin = {};
-        current.beginElement = this;
-        current.begin.y = $(this).offset().top - parentPosition.top + 15;
-        current.begin.x = $(this).offset().left - parentPosition.left + 110;
-        current.line.show();
-        current.line.stroke({
-            color: "#67C23A",
-        });
-        current.line.plot(current.begin.x, current.begin.y, current.begin.x, current.begin.y);
-        current.end = {};
-        if (current.endElement) {
-            $(current.endElement).removeClass('selected')
-            $(this).removeClass('selected')
-        }
-        current.endElement = '';
-        current.endValue = '';
-        self.currentInfo = current;
-    })
+            let current = self.lineArr.find(el=>{
+                return el.beginValue == $(this).attr('data-question');
+            }
+            );
+            current.begin = {};
+            current.beginElement = this;
+            current.begin.y = $(this).offset().top - parentPosition.top + 15;
+            current.begin.x = $(this).offset().left - parentPosition.left + 110;
+            current.line.show();
+            current.line.stroke({
+                color: "#67C23A",
+            });
+            current.line.plot(current.begin.x, current.begin.y, current.begin.x, current.begin.y);
+            current.end = {};
+            if (current.endElement) {
+                $(current.endElement).removeClass('selected')
+                $(this).removeClass('selected')
+            }
+            current.endElement = '';
+            current.endValue = '';
+            self.currentInfo = current;
+        })
     },
     getMousePos: function(event) {
         var e = event || window.event;
