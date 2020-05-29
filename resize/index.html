@@ -9,17 +9,26 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style>
-        .dragMe{
+        .drageMe{
             width: 200px;
             height: 200px;
             background: #ff00ff;
         }
+
+        .resizeMe{
+            width: 200px;
+            height: 200px;
+            background: #00ff00;
+        }
     </style>
 </head>
 <body>
-   <div class="dragMe">Dragme</div> 
+   <div class="resizeMe">ResizeMe</div> 
+   <div class="drageMe">DragMe</div> 
    <script>
-       $('.dragMe').resizable()
+       $('.resizeMe').resizable()
+
+       $( ".drageMe" ).draggable();
    </script>
 </body>
 </html>
