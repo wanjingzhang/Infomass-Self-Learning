@@ -23,12 +23,26 @@
     </style>
 </head>
 <body>
-   <div class="resizeMe">ResizeMe</div> 
-   <div class="drageMe">DragMe</div> 
-   <script>
-       $('.resizeMe').resizable()
+    <div class="openResize" onclick="openResize" myAvailable="true" >Open</div>
+    <div class="resizeMe">ResizeMe</div> 
+    <div class="drageMe">DragMe</div> 
+    <script> 
+        
+ 
+        function openResize(){
+            $(".openResize").attr("myAvailable");
+            var canDrag = $('#dragBtn').attr('num');
+            canDrag = !canDrag;
+            $('#dragBtn').attr('num', canDrag);
+            if (!canDrag) {
+                $('.drageMe').draggable({disabled: true});
+                $('.resizeMe').resizable({disabled: true});
+            }
+        }
 
-       $( ".drageMe" ).draggable();
-   </script>
+        
+        //    $('.resizeMe').resizable();
+        //    $( ".drageMe" ).draggable();
+    </script>
 </body>
 </html>

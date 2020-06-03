@@ -1,0 +1,939 @@
+Part Program Name: ,左侧（臂1）2010.PRG , , , , , , , , , , , , , , , , , , ,
+Part Name: ,V1-01（4.9） , , , , , , , , , , , , , , , , , , ,
+Revision Number: , , , , , , , , , , , , , , , , , , , ,
+Serial Number: , , , , , , , , , , , , , , , , , , , ,
+Date: ,2019/5/25 , , , , , , , , , , , , , , , , , , ,
+Time: ,9:08 , , , , , , , , , , , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置1 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置1 ,尺寸位置 (UB503AA) , ,Z , ,1343.837 ,1342.627 ,2 ,-2 , ,-1.209 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置2 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置2 ,尺寸位置 (UB503BA) , ,X , ,385.055 ,384.226 ,2 ,-2 , ,-0.829 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置3 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置3 ,尺寸位置 (LB504BA) , ,X , ,405.445 ,405.823 ,2 ,-2 , ,0.378 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置4 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置4 ,尺寸位置 (LB504AA) , ,Z , ,1343.015 ,1340.98 ,2 ,-2 , ,-2.035 ,-0.035499632 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置5 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置5 ,尺寸位置 (LA006XS) , ,X , ,414.505 ,416.424 ,1.5 ,-1.5 , ,1.919 ,0.418625856 , , , , , , , , ,
+位置5 ,尺寸位置 (LA006XS) , ,Y , ,-523.66 ,-523.472 ,2 ,-2 , ,0.188 ,0 , , , , , , , , ,
+位置5 ,尺寸位置 (LA006XS) , ,Z , ,1336.189 ,1333.559 ,1.5 ,-1.5 , ,-2.63 ,-1.129842168 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置6 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置6 ,尺寸位置 (LB505AA) , ,Z , ,1329.463 ,1326.153 ,2 ,-2 , ,-3.311 ,-1.310585962 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置7 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置7 ,尺寸位置 (LB505BA) , ,X , ,470.248 ,471.311 ,2 ,-2 , ,1.063 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置8 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置8 ,尺寸位置 (LB506BA) , ,Y , ,-832.39 ,-829.518 ,2 ,-2 , ,2.872 ,0.871597776 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置9 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置9 ,尺寸位置 (LB506AA) , ,X , ,436.939 ,438.113 ,2 ,-2 , ,1.174 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置10 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置10 ,尺寸位置 (LB507AA) , ,X , ,202.922 ,203.18 ,2 ,-2 , ,0.258 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置11 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置11 ,尺寸位置 (LB507BA) , ,Y , ,-859.146 ,-857.464 ,2 ,-2 , ,1.681 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置12 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置12 ,尺寸位置 (LB508BA) , ,Y , ,-862.765 ,-861.269 ,2 ,-2 , ,1.496 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置13 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置13 ,尺寸位置 (LB508AA) , ,X , ,160.362 ,160.418 ,2 ,-2 , ,0.056 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置14 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置14 ,尺寸位置 (LB509AA) , ,X , ,11.934 ,11.611 ,2 ,-2 , ,-0.323 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置15 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置15 ,尺寸位置 (LB509BA) , ,Y , ,-874.121 ,-873.151 ,2 ,-2 , ,0.971 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置16 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置16 ,尺寸位置 (LB500AA) , ,Z , ,789.328 ,789.227 ,1.5 ,-1.5 , ,-0.101 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置17 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置17 ,尺寸位置 (LB500BA) , ,X , ,-32.701 ,-33.993 ,1.5 ,-1.5 , ,-1.291 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置18 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置18 ,尺寸位置 (LB501BA) , ,X , ,3.191 ,2.802 ,1.5 ,-1.5 , ,-0.389 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置19 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置19 ,尺寸位置 (LB501AA) , ,Z , ,757.688 ,757.364 ,1.5 ,-1.5 , ,-0.324 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置20 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置20 ,尺寸位置 (LB502AA) , ,Z , ,730.904 ,730.715 ,1.5 ,-1.5 , ,-0.189 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置21 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置21 ,尺寸位置 (LB502BA) , ,X , ,29.628 ,29.374 ,1.5 ,-1.5 , ,-0.254 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置22 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置22 ,尺寸位置 (LA005LH) , ,X , ,-74.221 ,-74.806 ,1.2 ,-1.2 , ,-0.585 ,0 , , , , , , , , ,
+位置22 ,尺寸位置 (LA005LH) , ,Y , ,-545.092 ,-544.201 ,1.2 ,-1.2 , ,0.891 ,0 , , , , , , , , ,
+位置22 ,尺寸位置 (LA005LH) , ,Z , ,707.424 ,707.836 ,1.5 ,-1.5 , ,0.412 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置23 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置23 ,尺寸位置 (LB100XH) , ,X , ,-172.48 ,-173.577 ,1.5 ,-1.5 , ,-1.097 ,0 , , , , , , , , ,
+位置23 ,尺寸位置 (LB100XH) , ,Y , ,-888 ,-887.113 ,1.5 ,-1.5 , ,0.887 ,0 , , , , , , , , ,
+位置23 ,尺寸位置 (LB100XH) , ,Z , ,619.948 ,621.183 ,1.5 ,-1.5 , ,1.235 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置24 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置24 ,尺寸位置 (LB101XH) , ,X , ,-241.353 ,-241.938 ,1.5 ,-1.5 , ,-0.585 ,0 , , , , , , , , ,
+位置24 ,尺寸位置 (LB101XH) , ,Y , ,-886.028 ,-884.504 ,1.5 ,-1.5 , ,1.524 ,0.024252168 , , , , , , , , ,
+位置24 ,尺寸位置 (LB101XH) , ,Z , ,592.957 ,593.422 ,1.5 ,-1.5 , ,0.464 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置25 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置25 ,尺寸位置 (LA102XH) , ,X , ,-332.3 ,-332.447 ,1.5 ,-1.5 , ,-0.147 ,0 , , , , , , , , ,
+位置25 ,尺寸位置 (LA102XH) , ,Y , ,-873 ,-871.506 ,1.5 ,-1.5 , ,1.494 ,0 , , , , , , , , ,
+位置25 ,尺寸位置 (LA102XH) , ,Z , ,557.316 ,557.441 ,1.5 ,-1.5 , ,0.125 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置26 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置26 ,尺寸位置 (LA103XT) , ,X , ,-709.006 ,-709.492 ,1.5 ,-1.5 , ,-0.486 ,0 , , , , , , , , ,
+位置26 ,尺寸位置 (LA103XT) , ,Y , ,-613.977 ,-613.151 ,1.5 ,-1.5 , ,0.826 ,0 , , , , , , , , ,
+位置26 ,尺寸位置 (LA103XT) , ,Z , ,451 ,450.212 ,1.5 ,-1.5 , ,-0.788 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置28 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置28 ,尺寸位置 (LB105XH) , ,X , ,-756.678 ,-757.898 ,1.5 ,-1.5 , ,-1.22 ,0 , , , , , , , , ,
+位置28 ,尺寸位置 (LB105XH) , ,Y , ,-30 ,-29.57 ,1.5 ,-1.5 , ,0.43 ,0 , , , , , , , , ,
+位置28 ,尺寸位置 (LB105XH) , ,Z , ,479.344 ,478.175 ,1.5 ,-1.5 , ,-1.169 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置29 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置29 ,尺寸位置 (RB105XH) , ,X , ,-756.678 ,-757.693 ,1.5 ,-1.5 , ,-1.016 ,0 , , , , , , , , ,
+位置29 ,尺寸位置 (RB105XH) , ,Y , ,30 ,30.521 ,1.5 ,-1.5 , ,0.521 ,0 , , , , , , , , ,
+位置29 ,尺寸位置 (RB105XH) , ,Z , ,479.344 ,478.243 ,1.5 ,-1.5 , ,-1.101 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置30 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置30 ,尺寸位置 (LA104XT) , ,X , ,-795.288 ,-796.298 ,1.5 ,-1.5 , ,-1.01 ,0 , , , , , , , , ,
+位置30 ,尺寸位置 (LA104XT) , ,Y , ,-566 ,-566.21 ,1.5 ,-1.5 , ,-0.21 ,0 , , , , , , , , ,
+位置30 ,尺寸位置 (LA104XT) , ,Z , ,233.952 ,233.053 ,1.5 ,-1.5 , ,-0.899 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置31 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置31 ,尺寸位置 (LA118XH) , ,X , ,-516.4 ,-515.655 ,1.5 ,-1.5 , ,0.745 ,0 , , , , , , , , ,
+位置31 ,尺寸位置 (LA118XH) , ,Y , ,-891.2 ,-891.554 ,1.5 ,-1.5 , ,-0.354 ,0 , , , , , , , , ,
+位置31 ,尺寸位置 (LA118XH) , ,Z , ,201.7 ,201.486 ,1.5 ,-1.5 , ,-0.214 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置32 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置32 ,尺寸位置 (LA119XH) , ,X , ,-460.658 ,-460.524 ,1.5 ,-1.5 , ,0.135 ,0 , , , , , , , , ,
+位置32 ,尺寸位置 (LA119XH) , ,Y , ,-907.7 ,-908.953 ,1.5 ,-1.5 , ,-1.254 ,0 , , , , , , , , ,
+位置32 ,尺寸位置 (LA119XH) , ,Z , ,167.566 ,166.85 ,1.5 ,-1.5 , ,-0.716 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置33 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置33 ,尺寸位置 (LA108XH) , ,X , ,122 ,120.831 ,1.5 ,-1.5 , ,-1.169 ,0 , , , , , , , , ,
+位置33 ,尺寸位置 (LA108XH) , ,Y , ,-900.041 ,-899.091 ,1.5 ,-1.5 , ,0.95 ,0 , , , , , , , , ,
+位置33 ,尺寸位置 (LA108XH) , ,Z , ,722.616 ,722.256 ,1.5 ,-1.5 , ,-0.359 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置34 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置34 ,尺寸位置 (LA109XH) , ,X , ,122 ,121.036 ,1.5 ,-1.5 , ,-0.964 ,0 , , , , , , , , ,
+位置34 ,尺寸位置 (LA109XH) , ,Y , ,-902.867 ,-902.066 ,1.5 ,-1.5 , ,0.801 ,0 , , , , , , , , ,
+位置34 ,尺寸位置 (LA109XH) , ,Z , ,668.69 ,669.039 ,1.5 ,-1.5 , ,0.349 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置35 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置35 ,尺寸位置 (LA113XH) , ,X , ,33.011 ,31.964 ,1.2 ,-1.2 , ,-1.047 ,0 , , , , , , , , ,
+位置35 ,尺寸位置 (LA113XH) , ,Y , ,-924.04 ,-924.539 ,1.2 ,-1.2 , ,-0.499 ,0 , , , , , , , , ,
+位置35 ,尺寸位置 (LA113XH) , ,Z , ,632.958 ,632.864 ,1.2 ,-1.2 , ,-0.094 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置36 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置36 ,尺寸位置 (LA114XH) , ,X , ,64.032 ,62.989 ,1.2 ,-1.2 , ,-1.043 ,0 , , , , , , , , ,
+位置36 ,尺寸位置 (LA114XH) , ,Y , ,-927.675 ,-927.953 ,1.2 ,-1.2 , ,-0.278 ,0 , , , , , , , , ,
+位置36 ,尺寸位置 (LA114XH) , ,Z , ,571.88 ,571.742 ,1.2 ,-1.2 , ,-0.137 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置37 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置37 ,尺寸位置 (LA001XH) , ,X , ,89.109 ,88.225 ,1.2 ,-1.2 , ,-0.884 ,0 , , , , , , , , ,
+位置37 ,尺寸位置 (LA001XH) , ,Y , ,-932.304 ,-931.544 ,1.5 ,-1.5 , ,0.76 ,0 , , , , , , , , ,
+位置37 ,尺寸位置 (LA001XH) , ,Z , ,491.891 ,491.889 ,1.2 ,-1.2 , ,-0.002 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置38 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置38 ,尺寸位置 (LA110XH) , ,X , ,119 ,118.578 ,1.5 ,-1.5 , ,-0.422 ,0 , , , , , , , , ,
+位置38 ,尺寸位置 (LA110XH) , ,Y , ,-908.206 ,-908.397 ,1.5 ,-1.5 , ,-0.191 ,0 , , , , , , , , ,
+位置38 ,尺寸位置 (LA110XH) , ,Z , ,379.573 ,379.425 ,1.5 ,-1.5 , ,-0.148 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置39 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置39 ,尺寸位置 (LA112XH) , ,X , ,89 ,88.623 ,1.5 ,-1.5 , ,-0.377 ,0 , , , , , , , , ,
+位置39 ,尺寸位置 (LA112XH) , ,Y , ,-909.619 ,-909.598 ,1.5 ,-1.5 , ,0.021 ,0 , , , , , , , , ,
+位置39 ,尺寸位置 (LA112XH) , ,Z , ,352.61 ,352.447 ,1.5 ,-1.5 , ,-0.163 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置40 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置40 ,尺寸位置 (LA111XH) , ,X , ,119 ,118.573 ,1.5 ,-1.5 , ,-0.427 ,0 , , , , , , , , ,
+位置40 ,尺寸位置 (LA111XH) , ,Y , ,-911.032 ,-911.32 ,1.5 ,-1.5 , ,-0.288 ,0 , , , , , , , , ,
+位置40 ,尺寸位置 (LA111XH) , ,Z , ,325.647 ,325.755 ,1.5 ,-1.5 , ,0.108 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置41 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置41 ,尺寸位置 (LA115XH) , ,X , ,178.156 ,177.998 ,1.2 ,-1.2 , ,-0.158 ,0 , , , , , , , , ,
+位置41 ,尺寸位置 (LA115XH) , ,Y , ,-886.477 ,-886.835 ,1.2 ,-1.2 , ,-0.358 ,0 , , , , , , , , ,
+位置41 ,尺寸位置 (LA115XH) , ,Z , ,382.706 ,383.122 ,1.2 ,-1.2 , ,0.416 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置42 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置42 ,尺寸位置 (LBIP1XH) , ,X , ,199.37 ,199.299 ,1.5 ,-1.5 , ,-0.071 ,0 , , , , , , , , ,
+位置42 ,尺寸位置 (LBIP1XH) , ,Y , ,-825.315 ,-825.158 ,1.5 ,-1.5 , ,0.157 ,0 , , , , , , , , ,
+位置42 ,尺寸位置 (LBIP1XH) , ,Z , ,517.887 ,518.317 ,1.5 ,-1.5 , ,0.429 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置43 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置43 ,尺寸位置 (LB128XH) , ,X , ,162.18 ,160.4 ,1.5 ,-1.5 , ,-1.78 ,-0.280321045 , , , , , , , , ,
+位置43 ,尺寸位置 (LB128XH) , ,Y , ,-898.295 ,-897.999 ,1.5 ,-1.5 , ,0.296 ,0 , , , , , , , , ,
+位置43 ,尺寸位置 (LB128XH) , ,Z , ,518.969 ,520.297 ,1.5 ,-1.5 , ,1.328 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置44 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置44 ,尺寸位置 (LB129XH) , ,X , ,162.18 ,160.891 ,1.5 ,-1.5 , ,-1.289 ,0 , , , , , , , , ,
+位置44 ,尺寸位置 (LB129XH) , ,Y , ,-901.541 ,-900.756 ,1.5 ,-1.5 , ,0.785 ,0 , , , , , , , , ,
+位置44 ,尺寸位置 (LB129XH) , ,Z , ,457.055 ,458.374 ,1.5 ,-1.5 , ,1.32 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置45 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置45 ,尺寸位置 (LA116XH) , ,X , ,386 ,385.153 ,1.2 ,-1.2 , ,-0.847 ,0 , , , , , , , , ,
+位置45 ,尺寸位置 (LA116XH) , ,Y , ,-964.2 ,-964.3 ,1.2 ,-1.2 , ,-0.1 ,0 , , , , , , , , ,
+位置45 ,尺寸位置 (LA116XH) , ,Z , ,-3 ,-3.756 ,1.2 ,-1.2 , ,-0.756 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置46 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置46 ,尺寸位置 (LA117XH) , ,X , ,439 ,437.713 ,1.5 ,-1.5 , ,-1.287 ,0 , , , , , , , , ,
+位置46 ,尺寸位置 (LA117XH) , ,Y , ,-962.72 ,-960.976 ,1.5 ,-1.5 , ,1.744 ,0.243946824 , , , , , , , , ,
+位置46 ,尺寸位置 (LA117XH) , ,Z , ,-3 ,-3.554 ,1.5 ,-1.5 , ,-0.554 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置47 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置47 ,尺寸位置 (LB543AA) , ,Z , ,373.071 ,374.147 ,1.8 ,-1.8 , ,1.076 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置48 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置48 ,尺寸位置 (LB543BA) , ,Y , ,-987.343 ,-985.325 ,1.8 ,-1.8 , ,2.018 ,0.217837578 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置49 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置49 ,尺寸位置 (LB120XH) , ,X , ,1186.243 ,1184.443 ,1.5 ,-1.5 , ,-1.799 ,-0.299340035 , , , , , , , , ,
+位置49 ,尺寸位置 (LB120XH) , ,Y , ,-962.472 ,-960.941 ,1.5 ,-1.5 , ,1.531 ,0.030815523 , , , , , , , , ,
+位置49 ,尺寸位置 (LB120XH) , ,Z , ,313.394 ,313.587 ,1.5 ,-1.5 , ,0.193 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置50 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置50 ,尺寸位置 (LB125XH) , ,X , ,1246.7 ,1244.985 ,1.5 ,-1.5 , ,-1.715 ,-0.214843912 , , , , , , , , ,
+位置50 ,尺寸位置 (LB125XH) , ,Y , ,-963.57 ,-961.705 ,1.5 ,-1.5 , ,1.865 ,0.364860013 , , , , , , , , ,
+位置50 ,尺寸位置 (LB125XH) , ,Z , ,284.447 ,284.656 ,1.5 ,-1.5 , ,0.21 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置51 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置51 ,尺寸位置 (LB544BA) , ,Y , ,-973.171 ,-973.171 ,1.8 ,-1.8 , ,0 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置52 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置52 ,尺寸位置 (LB544AA) , ,X , ,1284.448 ,1284.454 ,1.8 ,-1.8 , ,0.006 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置53 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置53 ,尺寸位置 (LB121XH) , ,X , ,1209.5 ,1207.84 ,1.5 ,-1.5 , ,-1.66 ,-0.160212963 , , , , , , , , ,
+位置53 ,尺寸位置 (LB121XH) , ,Y , ,-960.277 ,-959.038 ,1.5 ,-1.5 , ,1.239 ,0 , , , , , , , , ,
+位置53 ,尺寸位置 (LB121XH) , ,Z , ,243 ,242.851 ,1.5 ,-1.5 , ,-0.149 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置54 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置54 ,尺寸位置 (LB124XH) , ,X , ,1246.692 ,1245.158 ,1.5 ,-1.5 , ,-1.534 ,-0.034393635 , , , , , , , , ,
+位置54 ,尺寸位置 (LB124XH) , ,Y , ,-961.447 ,-960.014 ,1.5 ,-1.5 , ,1.433 ,0 , , , , , , , , ,
+位置54 ,尺寸位置 (LB124XH) , ,Z , ,216.364 ,216.605 ,1.5 ,-1.5 , ,0.24 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置55 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置55 ,尺寸位置 (LB122XH) , ,X , ,1169 ,1167.651 ,1.5 ,-1.5 , ,-1.35 ,0 , , , , , , , , ,
+位置55 ,尺寸位置 (LB122XH) , ,Y , ,-955.195 ,-954.041 ,1.5 ,-1.5 , ,1.154 ,0 , , , , , , , , ,
+位置55 ,尺寸位置 (LB122XH) , ,Z , ,80 ,80.424 ,1.5 ,-1.5 , ,0.424 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置56 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置56 ,尺寸位置 (LB123XH) , ,X , ,1250 ,1248.192 ,1.5 ,-1.5 , ,-1.808 ,-0.307826203 , , , , , , , , ,
+位置56 ,尺寸位置 (LB123XH) , ,Y , ,-955.195 ,-953.847 ,1.5 ,-1.5 , ,1.348 ,0 , , , , , , , , ,
+位置56 ,尺寸位置 (LB123XH) , ,Z , ,80 ,80.316 ,1.5 ,-1.5 , ,0.316 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置57 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置57 ,尺寸位置 (LB545BA) , ,Y , ,-963.336 ,-963.336 ,1.8 ,-1.8 , ,0 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置58 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置58 ,尺寸位置 (LB545AA) , ,X , ,1285.603 ,1285.606 ,1.8 ,-1.8 , ,0.004 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置59 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置59 ,尺寸位置 (LA002XS) , ,X , ,1216.425 ,1214.978 ,1.2 ,-1.2 , ,-1.447 ,-0.246914098 , , , , , , , , ,
+位置59 ,尺寸位置 (LA002XS) , ,Y , ,-960.613 ,-959.051 ,1.5 ,-1.5 , ,1.562 ,0.061943937 , , , , , , , , ,
+位置59 ,尺寸位置 (LA002XS) , ,Z , ,-4.683 ,-4.353 ,1.2 ,-1.2 , ,0.33 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置60 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置60 ,尺寸位置 (LB510AA) , ,Y , ,-944.875 ,-943.652 ,1.8 ,-1.8 , ,1.222 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置61 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置61 ,尺寸位置 (LB510BA) , ,X , ,55.408 ,55.501 ,1.8 ,-1.8 , ,0.093 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置62 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置62 ,尺寸位置 (LB511BA) , ,X , ,161.831 ,162.103 ,1.8 ,-1.8 , ,0.272 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置63 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置63 ,尺寸位置 (LB511AA) , ,Y , ,-923.111 ,-921.378 ,1.8 ,-1.8 , ,1.733 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置64 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置64 ,尺寸位置 (LB512AA) , ,Y , ,-895.657 ,-892.756 ,1.8 ,-1.8 , ,2.901 ,1.101090641 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置65 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置65 ,尺寸位置 (LB512BA) , ,X , ,345.149 ,345.779 ,1.8 ,-1.8 , ,0.631 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置66 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置66 ,尺寸位置 (LB513BA) , ,X , ,458.999 ,459.778 ,1.8 ,-1.8 , ,0.778 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置67 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置67 ,尺寸位置 (LB513AA) , ,Y , ,-885.326 ,-881.698 ,1.8 ,-1.8 , ,3.628 ,1.827700363 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置68 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置68 ,尺寸位置 (LB514BA) , ,Z , ,1320.347 ,1322.034 ,1.8 ,-1.8 , ,1.687 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置69 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置69 ,尺寸位置 (LB514AA) , ,Y , ,-892.272 ,-890.209 ,1.8 ,-1.8 , ,2.064 ,0.263543581 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置70 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置70 ,尺寸位置 (LB515AA) , ,Y , ,-895.33 ,-893.036 ,1.8 ,-1.8 , ,2.294 ,0.49416807 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置71 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置71 ,尺寸位置 (LB515BA) , ,Z , ,1337.777 ,1338.978 ,1.8 ,-1.8 , ,1.201 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置72 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置72 ,尺寸位置 (LB516BA) , ,X , ,1203.383 ,1201.618 ,1.8 ,-1.8 , ,-1.765 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置73 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置73 ,尺寸位置 (LB516AA) , ,Y , ,-925.501 ,-922.685 ,1.8 ,-1.8 , ,2.816 ,1.015529303 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置74 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置74 ,尺寸位置 (LB517AA) , ,Y , ,-955.136 ,-952.704 ,1.8 ,-1.8 , ,2.432 ,0.632068002 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置75 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置75 ,尺寸位置 (LB517BA) , ,X , ,1199.913 ,1197.831 ,1.8 ,-1.8 , ,-2.082 ,-0.282484375 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置76 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置76 ,尺寸位置 (LB518BA) , ,X , ,1195.551 ,1193.821 ,1.8 ,-1.8 , ,-1.73 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置77 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置77 ,尺寸位置 (LB518AA) , ,Y , ,-977.732 ,-975.829 ,1.8 ,-1.8 , ,1.903 ,0.103094327 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置78 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置78 ,尺寸位置 (LB519AA) , ,Y , ,-988.61 ,-987.099 ,1.8 ,-1.8 , ,1.511 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置79 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置79 ,尺寸位置 (LB519BA) , ,X , ,1191.651 ,1190.453 ,1.8 ,-1.8 , ,-1.198 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置80 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置80 ,尺寸位置 (LB531XA) , ,Y , ,-870.846 ,-871.54 ,1.5 ,-1.5 , ,-0.694 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置81 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置81 ,尺寸位置 (LB530XA) , ,Y , ,-872.759 ,-873.022 ,1.5 ,-1.5 , ,-0.263 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置82 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置82 ,尺寸位置 (LB529XA) , ,Y , ,-873.266 ,-871.649 ,1.5 ,-1.5 , ,1.616 ,0.11643905 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置83 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置83 ,尺寸位置 (LB528XA) , ,Y , ,-871.855 ,-869.344 ,1.5 ,-1.5 , ,2.511 ,1.011100397 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置84 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置84 ,尺寸位置 (LB527XA) , ,Y , ,-867.995 ,-866.42 ,1.5 ,-1.5 , ,1.575 ,0.075110268 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置85 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置85 ,尺寸位置 (LB526XA) , ,Y , ,-859.192 ,-856.53 ,1.5 ,-1.5 , ,2.662 ,1.162128288 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置86 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置86 ,尺寸位置 (LB525XA) , ,Y , ,-835.03 ,-831.812 ,1.5 ,-1.5 , ,3.218 ,1.718124533 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置87 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置87 ,尺寸位置 (LB524XA) , ,Y , ,-837.699 ,-834.471 ,1.5 ,-1.5 , ,3.228 ,1.728340187 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置88 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置88 ,尺寸位置 (LB523XA) , ,Y , ,-849.68 ,-846.665 ,1.5 ,-1.5 , ,3.016 ,1.515775422 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置89 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置89 ,尺寸位置 (LB522XA) , ,Y , ,-860.465 ,-858.265 ,1.5 ,-1.5 , ,2.2 ,0.700149881 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置90 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置90 ,尺寸位置 (LB521XA) , ,Y , ,-862.267 ,-860.499 ,1.5 ,-1.5 , ,1.769 ,0.268891062 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置91 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置91 ,尺寸位置 (LB520XA) , ,Y , ,-863.733 ,-863.737 ,1.5 ,-1.5 , ,-0.005 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置92 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置92 ,尺寸位置 (LB536XA) , ,Y , ,-865.393 ,-865.903 ,1.5 ,-1.5 , ,-0.51 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置93 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置93 ,尺寸位置 (LB535XA) , ,Y , ,-867.344 ,-867.227 ,1.5 ,-1.5 , ,0.117 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置94 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置94 ,尺寸位置 (LB534XA) , ,Y , ,-868.152 ,-868.001 ,1.5 ,-1.5 , ,0.151 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置95 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置95 ,尺寸位置 (LB533XA) , ,Y , ,-867.566 ,-868.171 ,1.5 ,-1.5 , ,-0.605 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置96 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置96 ,尺寸位置 (LB532XA) , ,Y , ,-868.95 ,-868.952 ,1.5 ,-1.5 , ,-0.002 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置97 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置97 ,尺寸位置 (LB149XS) , ,X , ,92.389 ,90.61 ,1.5 ,-1.5 , ,-1.779 ,-0.278997027 , , , , , , , , ,
+位置97 ,尺寸位置 (LB149XS) , ,Y , ,-615.77 ,-616.606 ,1.5 ,-1.5 , ,-0.836 ,0 , , , , , , , , ,
+位置97 ,尺寸位置 (LB149XS) , ,Z , ,424.003 ,424.55 ,1.5 ,-1.5 , ,0.547 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置98 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置98 ,尺寸位置 (LB542XA) , ,Y , ,-953.514 ,-952.03 ,2 ,-2 , ,1.485 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置99 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置99 ,尺寸位置 (LB126XS) , ,X , ,1393.573 ,1392.565 ,1.8 ,-1.8 , ,-1.009 ,0 , , , , , , , , ,
+位置99 ,尺寸位置 (LB126XS) , ,Y , ,-943.187 ,-941.81 ,1.8 ,-1.8 , ,1.378 ,0 , , , , , , , , ,
+位置99 ,尺寸位置 (LB126XS) , ,Z , ,916.017 ,915.608 ,1.8 ,-1.8 , ,-0.41 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置100 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置100 ,尺寸位置 (LB537XA) , ,Y , ,-903.2 ,-902.548 ,2 ,-2 , ,0.652 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置101 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置101 ,尺寸位置 (LB538XA) , ,Y , ,-898.5 ,-896.048 ,2 ,-2 , ,2.452 ,0.452251928 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置102 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置102 ,尺寸位置 (LB539XA) , ,Y , ,-903.1 ,-902.942 ,2 ,-2 , ,0.158 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置103 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置103 ,尺寸位置 (LB127XH) , ,X , ,2419.087 ,2417.75 ,1.8 ,-1.8 , ,-1.337 ,0 , , , , , , , , ,
+位置103 ,尺寸位置 (LB127XH) , ,Y , ,-943.743 ,-941.899 ,1.8 ,-1.8 , ,1.844 ,0.044207671 , , , , , , , , ,
+位置103 ,尺寸位置 (LB127XH) , ,Z , ,923.249 ,922.682 ,1.8 ,-1.8 , ,-0.567 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置104 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置104 ,尺寸位置 (LB540XA) , ,Y , ,-951.9 ,-949.342 ,2 ,-2 , ,2.558 ,0.557897092 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置105 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置105 ,尺寸位置 (LB541XA) , ,Y , ,-954.6 ,-953.423 ,2 ,-2 , ,1.177 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置106 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置106 ,尺寸位置 (LB551XA) , ,Y , ,-952.8 ,-951.806 ,2 ,-2 , ,0.994 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置107 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置107 ,尺寸位置 (LB546XA) , ,Y , ,-900 ,-899.023 ,2 ,-2 , ,0.977 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置108 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置108 ,尺寸位置 (LB547XA) , ,Y , ,-895 ,-892.382 ,2 ,-2 , ,2.618 ,0.618240787 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置109 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置109 ,尺寸位置 (LB548XA) , ,Y , ,-888 ,-885.111 ,2 ,-2 , ,2.889 ,0.888887609 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置110 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置110 ,尺寸位置 (LB549XA) , ,Y , ,-936.3 ,-933.373 ,2 ,-2 , ,2.927 ,0.927234798 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置111 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置111 ,尺寸位置 (LB550XA) , ,Y , ,-952.2 ,-951.14 ,2 ,-2 , ,1.06 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置112 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置112 ,尺寸位置 (LA003XS) , ,X , ,3570.8 ,3569.111 ,1.2 ,-1.2 , ,-1.689 ,-0.489319319 , , , , , , , , ,
+位置112 ,尺寸位置 (LA003XS) , ,Y , ,-945.847 ,-944.865 ,1.5 ,-1.5 , ,0.982 ,0 , , , , , , , , ,
+位置112 ,尺寸位置 (LA003XS) , ,Z , ,-4.7 ,-5.392 ,1.2 ,-1.2 , ,-0.692 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置113 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置113 ,尺寸位置 (LB160XT) , ,X , ,3635.5 ,3633.934 ,1.8 ,-1.8 , ,-1.566 ,0 , , , , , , , , ,
+位置113 ,尺寸位置 (LB160XT) , ,Y , ,-947.5 ,-946.516 ,1.8 ,-1.8 , ,0.984 ,0 , , , , , , , , ,
+位置113 ,尺寸位置 (LB160XT) , ,Z , ,-46 ,-46.687 ,1.8 ,-1.8 , ,-0.687 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置114 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置114 ,尺寸位置 (LB155XH) , ,X , ,3558 ,3556.24 ,1.8 ,-1.8 , ,-1.76 ,0 , , , , , , , , ,
+位置114 ,尺寸位置 (LB155XH) , ,Y , ,-940 ,-939.127 ,1.8 ,-1.8 , ,0.873 ,0 , , , , , , , , ,
+位置114 ,尺寸位置 (LB155XH) , ,Z , ,-131 ,-131.516 ,1.8 ,-1.8 , ,-0.516 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置115 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置115 ,尺寸位置 (LB156XH) , ,X , ,3558 ,3556.086 ,1.8 ,-1.8 , ,-1.914 ,-0.114237253 , , , , , , , , ,
+位置115 ,尺寸位置 (LB156XH) , ,Y , ,-920 ,-917.748 ,1.8 ,-1.8 , ,2.252 ,0.452216866 , , , , , , , , ,
+位置115 ,尺寸位置 (LB156XH) , ,Z , ,-242 ,-242.143 ,1.8 ,-1.8 , ,-0.143 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置116 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置116 ,尺寸位置 (LB157XT) , ,X , ,3548.58 ,3546.149 ,1.8 ,-1.8 , ,-2.431 ,-0.631164295 , , , , , , , , ,
+位置116 ,尺寸位置 (LB157XT) , ,Y , ,-868 ,-864.566 ,1.8 ,-1.8 , ,3.434 ,1.634065317 , , , , , , , , ,
+位置116 ,尺寸位置 (LB157XT) , ,Z , ,-324 ,-323.375 ,1.8 ,-1.8 , ,0.625 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置119 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置119 ,尺寸位置 (LB570AA) , ,X , ,3825.799 ,3824.501 ,2 ,-2 , ,-1.299 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置120 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置120 ,尺寸位置 (LB570BA) , ,X , ,3826.921 ,3825.766 ,2 ,-2 , ,-1.154 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置121 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置121 ,尺寸位置 (LB570CA) , ,X , ,3819.741 ,3818.343 ,2 ,-2 , ,-1.398 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置122 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置122 ,尺寸位置 (LB556AA) , ,X , ,3831.305 ,3829.546 ,2 ,-2 , ,-1.76 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置123 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置123 ,尺寸位置 (LB556BA) , ,Z , ,64.431 ,64.721 ,2 ,-2 , ,0.291 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置124 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置124 ,尺寸位置 (LB557BA) , ,Z , ,64.129 ,64.112 ,2 ,-2 , ,-0.017 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置125 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置125 ,尺寸位置 (LB557AA) , ,X , ,3822.22 ,3820.962 ,2 ,-2 , ,-1.259 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置126 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置126 ,尺寸位置 (LB558AA) , ,X , ,3778.052 ,3777.403 ,2 ,-2 , ,-0.649 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置127 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置127 ,尺寸位置 (LB558BA) , ,Z , ,64.312 ,64.268 ,2 ,-2 , ,-0.044 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置128 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置128 ,尺寸位置 (LB559BA) , ,Z , ,64.222 ,64.039 ,2 ,-2 , ,-0.182 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置129 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置129 ,尺寸位置 (LB559AA) , ,Y , ,-960.608 ,-958.664 ,2 ,-2 , ,1.945 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置130 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置130 ,尺寸位置 (LB565BA) , ,Y , ,-950.94 ,-949.173 ,1.8 ,-1.8 , ,1.767 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置131 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置131 ,尺寸位置 (LB565AA) , ,Z , ,147.787 ,146.557 ,2 ,-2 , ,-1.23 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置132 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置132 ,尺寸位置 (LB564AA) , ,Z , ,147.945 ,146.9 ,2 ,-2 , ,-1.045 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置133 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置133 ,尺寸位置 (LB564BA) , ,Y , ,-924.033 ,-922.556 ,1.8 ,-1.8 , ,1.477 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置134 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置134 ,尺寸位置 (LB563BA) , ,X , ,3819.218 ,3817.659 ,1.8 ,-1.8 , ,-1.56 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置135 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置135 ,尺寸位置 (LB563AA) , ,Z , ,148.556 ,147.431 ,2 ,-2 , ,-1.124 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置136 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置136 ,尺寸位置 (LB562BA) , ,X , ,3710.189 ,3708.302 ,2 ,-2 , ,-1.888 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置137 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置137 ,尺寸位置 (LB562AA) , ,Y , ,-964.098 ,-962.017 ,1.8 ,-1.8 , ,2.082 ,0.28154754 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置138 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置138 ,尺寸位置 (LB561AA) , ,Y , ,-961.303 ,-958.063 ,1.8 ,-1.8 , ,3.24 ,1.440348638 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置139 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置139 ,尺寸位置 (LB561BA) , ,X , ,3709.164 ,3707.354 ,2 ,-2 , ,-1.81 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置140 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置140 ,尺寸位置 (LB560BA) , ,X , ,3705.222 ,3703.669 ,2 ,-2 , ,-1.553 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置141 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置141 ,尺寸位置 (LB560AA) , ,Y , ,-957.833 ,-954.399 ,1.8 ,-1.8 , ,3.434 ,1.634014263 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置142 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置142 ,尺寸位置 (LB568BA) , ,Y , ,-949.46 ,-946.14 ,1.8 ,-1.8 , ,3.32 ,1.520272048 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置143 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置143 ,尺寸位置 (LB568AA) , ,Z , ,665.975 ,666.029 ,2 ,-2 , ,0.054 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置144 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置144 ,尺寸位置 (LB567AA) , ,Z , ,663.153 ,663.404 ,2 ,-2 , ,0.251 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置145 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置145 ,尺寸位置 (LB567BA) , ,Y , ,-925.507 ,-922.863 ,1.8 ,-1.8 , ,2.644 ,0.843585722 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置146 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置146 ,尺寸位置 (LB566BA) , ,X , ,3830.475 ,3829.237 ,1.8 ,-1.8 , ,-1.238 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置147 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置147 ,尺寸位置 (LB566AA) , ,Z , ,654.163 ,653.953 ,2 ,-2 , ,-0.21 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置148 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置148 ,尺寸位置 (LB164XS) , ,X , ,3709 ,3708.449 ,1.8 ,-1.8 , ,-0.551 ,0 , , , , , , , , ,
+位置148 ,尺寸位置 (LB164XS) , ,Y , ,-932.699 ,-930.601 ,1.8 ,-1.8 , ,2.098 ,0.297597518 , , , , , , , , ,
+位置148 ,尺寸位置 (LB164XS) , ,Z , ,640.001 ,639.356 ,1.8 ,-1.8 , ,-0.645 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置149 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置149 ,尺寸位置 (LB169XT) , ,X , ,3735.132 ,3734.608 ,1.8 ,-1.8 , ,-0.524 ,0 , , , , , , , , ,
+位置149 ,尺寸位置 (LB169XT) , ,Y , ,-802.712 ,-800.885 ,1.8 ,-1.8 , ,1.827 ,0.026959232 , , , , , , , , ,
+位置149 ,尺寸位置 (LB169XT) , ,Z , ,562.424 ,561.44 ,1.8 ,-1.8 , ,-0.984 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置151 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置151 ,尺寸位置 (LB168XT) , ,X , ,3737.759 ,3736.705 ,1.8 ,-1.8 , ,-1.054 ,0 , , , , , , , , ,
+位置151 ,尺寸位置 (LB168XT) , ,Y , ,-794.478 ,-793.035 ,1.8 ,-1.8 , ,1.443 ,0 , , , , , , , , ,
+位置151 ,尺寸位置 (LB168XT) , ,Z , ,363.804 ,363.362 ,1.8 ,-1.8 , ,-0.442 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置152 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置152 ,尺寸位置 (LB004XH) , ,X , ,3713 ,3711.431 ,1.5 ,-1.5 , ,-1.569 ,-0.06939652 , , , , , , , , ,
+位置152 ,尺寸位置 (LB004XH) , ,Y , ,-878 ,-876.067 ,1.5 ,-1.5 , ,1.933 ,0.4328779 , , , , , , , , ,
+位置152 ,尺寸位置 (LB004XH) , ,Z , ,366 ,365.3 ,1.5 ,-1.5 , ,-0.7 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置153 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置153 ,尺寸位置 (LB165XS) , ,X , ,3713 ,3711.664 ,1.8 ,-1.8 , ,-1.336 ,0 , , , , , , , , ,
+位置153 ,尺寸位置 (LB165XS) , ,Y , ,-937.689 ,-935.927 ,1.8 ,-1.8 , ,1.762 ,0 , , , , , , , , ,
+位置153 ,尺寸位置 (LB165XS) , ,Z , ,367.499 ,366.588 ,1.8 ,-1.8 , ,-0.911 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置154 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置154 ,尺寸位置 (LB166XS) , ,X , ,3713 ,3710.6 ,1.8 ,-1.8 , ,-2.4 ,-0.599894124 , , , , , , , , ,
+位置154 ,尺寸位置 (LB166XS) , ,Y , ,-935.999 ,-934.224 ,1.8 ,-1.8 , ,1.775 ,0 , , , , , , , , ,
+位置154 ,尺寸位置 (LB166XS) , ,Z , ,165.501 ,164.891 ,1.8 ,-1.8 , ,-0.61 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置155 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置155 ,尺寸位置 (LB167XT) , ,X , ,3739.796 ,3739.144 ,1.8 ,-1.8 , ,-0.652 ,0 , , , , , , , , ,
+位置155 ,尺寸位置 (LB167XT) , ,Y , ,-785.978 ,-784.997 ,1.8 ,-1.8 , ,0.981 ,0 , , , , , , , , ,
+位置155 ,尺寸位置 (LB167XT) , ,Z , ,173.804 ,173.265 ,1.8 ,-1.8 , ,-0.539 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置156 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置156 ,尺寸位置 (LB158XT) , ,X , ,3821.5 ,3820.603 ,1.8 ,-1.8 , ,-0.897 ,0 , , , , , , , , ,
+位置156 ,尺寸位置 (LB158XT) , ,Y , ,-858.5 ,-856.514 ,1.8 ,-1.8 , ,1.986 ,0.185896994 , , , , , , , , ,
+位置156 ,尺寸位置 (LB158XT) , ,Z , ,-46 ,-48.298 ,1.8 ,-1.8 , ,-2.298 ,-0.497599897 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置157 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置157 ,尺寸位置 (LB159XT) , ,X , ,3746 ,3743.901 ,1.8 ,-1.8 , ,-2.099 ,-0.299457125 , , , , , , , , ,
+位置157 ,尺寸位置 (LB159XT) , ,Y , ,-768.5 ,-767.148 ,1.8 ,-1.8 , ,1.352 ,0 , , , , , , , , ,
+位置157 ,尺寸位置 (LB159XT) , ,Z , ,-47 ,-47.618 ,1.8 ,-1.8 , ,-0.618 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置158 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置158 ,尺寸位置 (LB161XT) , ,X , ,3811.5 ,3811.366 ,1.8 ,-1.8 , ,-0.134 ,0 , , , , , , , , ,
+位置158 ,尺寸位置 (LB161XT) , ,Y , ,-628 ,-629.039 ,1.8 ,-1.8 , ,-1.039 ,0 , , , , , , , , ,
+位置158 ,尺寸位置 (LB161XT) , ,Z , ,-130.8 ,-132.571 ,1.8 ,-1.8 , ,-1.771 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置159 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置159 ,尺寸位置 (LB162XT) , ,X , ,3841 ,3840.393 ,1.8 ,-1.8 , ,-0.607 ,0 , , , , , , , , ,
+位置159 ,尺寸位置 (LB162XT) , ,Y , ,-333 ,-334.049 ,1.8 ,-1.8 , ,-1.049 ,0 , , , , , , , , ,
+位置159 ,尺寸位置 (LB162XT) , ,Z , ,-130.5 ,-132.052 ,1.8 ,-1.8 , ,-1.552 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置160 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置160 ,尺寸位置 (LB163XT) , ,X , ,3849 ,3848.505 ,1.8 ,-1.8 , ,-0.495 ,0 , , , , , , , , ,
+位置160 ,尺寸位置 (LB163XT) , ,Y , ,0 ,-0.997 ,1.8 ,-1.8 , ,-0.997 ,0 , , , , , , , , ,
+位置160 ,尺寸位置 (LB163XT) , ,Z , ,-130.5 ,-131.544 ,1.8 ,-1.8 , ,-1.044 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置161 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置161 ,尺寸位置 (LB598AA) , ,Z , ,-108.422 ,-108.63 ,1.8 ,-1.8 , ,-0.207 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置162 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置162 ,尺寸位置 (LB598BA) , ,Z , ,-108.422 ,-109.586 ,1.8 ,-1.8 , ,-1.164 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置163 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置163 ,尺寸位置 (LB597BA) , ,Z , ,-108.327 ,-109.581 ,1.8 ,-1.8 , ,-1.254 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置164 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置164 ,尺寸位置 (LB597AA) , ,Z , ,-108.327 ,-109.684 ,1.8 ,-1.8 , ,-1.356 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置165 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置165 ,尺寸位置 (LB596AA) , ,Z , ,-108.015 ,-108.224 ,1.8 ,-1.8 , ,-0.209 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置166 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置166 ,尺寸位置 (LB596BA) , ,Z , ,-108.015 ,-108.892 ,1.8 ,-1.8 , ,-0.878 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置167 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置167 ,尺寸位置 (LB595BA) , ,Z , ,-107.407 ,-108.041 ,1.8 ,-1.8 , ,-0.634 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置168 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置168 ,尺寸位置 (LB595AA) , ,Z , ,-107.426 ,-105.963 ,1.8 ,-1.8 , ,1.462 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置169 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置169 ,尺寸位置 (LB582XA) , ,Y , ,-729.797 ,-729.523 ,1.8 ,-1.8 , ,0.274 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置170 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置170 ,尺寸位置 (LB581XA) , ,Y , ,-759.836 ,-759.763 ,1.8 ,-1.8 , ,0.073 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置171 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置171 ,尺寸位置 (LB590AA) , ,Y , ,-817.738 ,-816.567 ,1.8 ,-1.8 , ,1.17 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置172 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置172 ,尺寸位置 (LB590BA) , ,X , ,3830.938 ,3829.318 ,1.8 ,-1.8 , ,-1.62 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置173 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置173 ,尺寸位置 (LB589BA) , ,X , ,3828.607 ,3827.231 ,1.8 ,-1.8 , ,-1.376 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置174 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置174 ,尺寸位置 (LB589AA) , ,Y , ,-819.84 ,-818.931 ,1.8 ,-1.8 , ,0.908 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置175 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置175 ,尺寸位置 (LB580XA) , ,Y , ,-767.213 ,-766.225 ,1.8 ,-1.8 , ,0.988 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置176 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置176 ,尺寸位置 (LB579XA) , ,Y , ,-772.079 ,-770.456 ,1.8 ,-1.8 , ,1.624 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置177 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置177 ,尺寸位置 (LB578XA) , ,Y , ,-774.985 ,-772.702 ,1.8 ,-1.8 , ,2.283 ,0.483469123 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置178 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置178 ,尺寸位置 (LB588AA) , ,Y , ,-851.899 ,-849.235 ,1.8 ,-1.8 , ,2.664 ,0.86372898 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置179 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置179 ,尺寸位置 (LB588BA) , ,X , ,3831.121 ,3829.939 ,1.8 ,-1.8 , ,-1.183 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置180 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置180 ,尺寸位置 (LB577XA) , ,Y , ,-772.173 ,-768.92 ,1.8 ,-1.8 , ,3.254 ,1.453513877 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置181 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置181 ,尺寸位置 (LB576XA) , ,Y , ,-764.735 ,-761.306 ,1.8 ,-1.8 , ,3.43 ,1.629800439 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置182 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置182 ,尺寸位置 (LB587AA) , ,Y , ,-825.219 ,-822.146 ,1.8 ,-1.8 , ,3.073 ,1.273426384 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置183 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置183 ,尺寸位置 (LB587BA) , ,X , ,3816.708 ,3814.717 ,1.8 ,-1.8 , ,-1.991 ,-0.190744146 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置184 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置184 ,尺寸位置 (LB575XA) , ,Y , ,-751.502 ,-747.63 ,1.8 ,-1.8 , ,3.873 ,2.072554891 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置185 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置185 ,尺寸位置 (LB574XA) , ,Y , ,-731.444 ,-727.575 ,1.8 ,-1.8 , ,3.869 ,2.069238487 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置186 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置186 ,尺寸位置 (LB586AA) , ,Y , ,-791.199 ,-787.702 ,1.8 ,-1.8 , ,3.497 ,1.696614039 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置187 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置187 ,尺寸位置 (LB586BA) , ,X , ,3800.008 ,3798.709 ,1.8 ,-1.8 , ,-1.298 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置188 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置188 ,尺寸位置 (LB585BA) , ,X , ,3785.782 ,3784.766 ,1.8 ,-1.8 , ,-1.016 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置189 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置189 ,尺寸位置 (LB585AA) , ,Y , ,-764.371 ,-760.569 ,1.8 ,-1.8 , ,3.802 ,2.001831682 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置190 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置190 ,尺寸位置 (LB573XA) , ,Y , ,-704.47 ,-699.754 ,1.8 ,-1.8 , ,4.716 ,2.915853185 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置191 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置191 ,尺寸位置 (LB572XA) , ,Y , ,-673.763 ,-669.475 ,1.8 ,-1.8 , ,4.288 ,2.487970968 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置192 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置192 ,尺寸位置 (LB584AA) , ,Y , ,-733.969 ,-730.801 ,1.8 ,-1.8 , ,3.168 ,1.368355993 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置193 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置193 ,尺寸位置 (LB584BA) , ,X , ,3771.733 ,3771.317 ,1.8 ,-1.8 , ,-0.416 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置194 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置194 ,尺寸位置 (LB583BA) , ,X , ,3763.969 ,3763.266 ,1.8 ,-1.8 , ,-0.703 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置195 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置195 ,尺寸位置 (LB583AA) , ,Y , ,-715.009 ,-712.136 ,1.8 ,-1.8 , ,2.873 ,1.072854547 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置196 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置196 ,尺寸位置 (LB571XA) , ,Y , ,-635.863 ,-634.922 ,1.8 ,-1.8 , ,0.941 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置197 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置197 ,尺寸位置 (LB591BA) , ,Z , ,1667.87 ,1667.603 ,1.8 ,-1.8 , ,-0.267 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置198 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置198 ,尺寸位置 (LB591AA) , ,X , ,3776.056 ,3777.213 ,1.8 ,-1.8 , ,1.157 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置199 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置199 ,尺寸位置 (LB592AA) , ,X , ,3805.527 ,3806.162 ,1.8 ,-1.8 , ,0.635 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置200 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置200 ,尺寸位置 (LB592BA) , ,Z , ,1679.874 ,1681.7 ,1.8 ,-1.8 , ,1.826 ,0.025689395 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置201 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置201 ,尺寸位置 (LB593BA) , ,Z , ,1685.225 ,1687.581 ,1.8 ,-1.8 , ,2.357 ,0.556782635 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置202 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置202 ,尺寸位置 (LB593AA) , ,X , ,3822.407 ,3822.876 ,1.8 ,-1.8 , ,0.469 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置203 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置203 ,尺寸位置 (LB594AA) , ,X , ,3828.248 ,3828.619 ,1.8 ,-1.8 , ,0.372 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置204 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置204 ,尺寸位置 (LB594BA) , ,Z , ,1685.526 ,1687.886 ,1.8 ,-1.8 , ,2.359 ,0.559475075 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置205 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置205 ,尺寸位置 (LB594CA) , ,Z , ,1639.378 ,1641.605 ,1.8 ,-1.8 , ,2.227 ,0.426813595 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置206 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置206 ,尺寸位置 (LB593CA) , ,Z , ,1637.671 ,1639.114 ,1.8 ,-1.8 , ,1.443 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置207 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置207 ,尺寸位置 (LB592CA) , ,Z , ,1632.501 ,1633.155 ,1.8 ,-1.8 , ,0.654 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置208 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置208 ,尺寸位置 (LB591CA) , ,Z , ,1620.03 ,1618.399 ,1.8 ,-1.8 , ,-1.631 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置209 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置209 ,尺寸位置 (LB569CA) , ,X , ,3788.117 ,3786.646 ,2 ,-2 , ,-1.471 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置210 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置210 ,尺寸位置 (LB569BA) , ,X , ,3794.07 ,3792.732 ,2 ,-2 , ,-1.338 ,0 , , , , , , , , ,
+ , , , , , , , , , , , , , , , , , , , ,
+位置211 ,UNITS ,毫米 , , , , , , , , , , , , , , , , , ,
+DIMENSION ,DESCRIPTION ,特征 ,AXIS ,段 ,NOMINAL ,MEAS ,+TOL ,-TOL ,BONUS ,DEV ,OUTTOL ,DEVANG ,Datum Shift Effect ,不用的区域 ,Shift X ,Shift Y ,Shift Z ,旋转X ,旋转Y ,旋转Z
+位置211 ,尺寸位置 (LB569AA) , ,X , ,3790.018 ,3788.59 ,2 ,-2 , ,-1.428 ,0 , , , , , , , , ,

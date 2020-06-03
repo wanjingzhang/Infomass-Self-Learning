@@ -94,14 +94,12 @@ div.ruler div.cursor {height:20px; width:30px; background-color:#3C6E31; color:w
             }
         };
     
-        var zNodeModules = [
-            {name: "数模", open: true, nodeType: '3',nocheck:true,
-                children: [
+        var zNodeModules = [ 
                     {name: "CheMen-L.ply", open: true, data:"CheMen-L.ply"},
-                    {name: "2.ply", open: true, data:"2.ply"}
-                    ]
-            }];
-         
+                    {name: "2.ply", open: true, data:"2.ply"} 
+            ];
+        var str ='[{"name":"CheMen-L.ply","open":true,"data":"/cm4d-image/AACF0323-B3B3-4DBC-A808-7C022BD4B4A8/CheMen-L.ply"},{"name":"1XK2005000002.ply","open":true,"data":"/cm4d-image/AACF0323-B3B3-4DBC-A808-7C022BD4B4A8/1XK2005000002.ply"}]';
+        zNodeModules = JSON.parse(str);
         function beforeClick(treeId, treeNode) {
             var zTree = $.fn.zTree.getZTreeObj("treeDemo");
             zTree.checkNode(treeNode, !treeNode.checked, null, true);
