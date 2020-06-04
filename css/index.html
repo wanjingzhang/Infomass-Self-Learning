@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .testCenter{ 
+            border: 1px solid red;margin: 0 auto; height: 50px;width: 80px;
+        }
+    </style>
+    <div class="testCenter"> 
+    </div>
+
+    <div class="outer">
+        <span>我想居中显示</span>
+    </div>
+
+    <style>
+        .outer{
+            width:300px;
+            height:300px;
+            position:relative;
+            background-color:#ccc;
+        }
+        span{
+            float:left;
+            position:absolute;
+            background-color:red;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }
+        .span2{
+            float:left;
+            position:absolute;
+            background-color:red;
+            width:150px;
+            height:50px;
+            top:50%;
+            left:50%;
+            margin:-25px 0px 0px -75px;
+        }
+    </style>
+    <div class="outer">
+        <span class="span2">我想居中显示</span>
+    </div>
+</body>
+</html>
+
