@@ -1,4 +1,4 @@
-# Infomass-Self-Learning
+# Self-Learning
 Daily work Library
 
 
