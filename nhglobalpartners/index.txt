@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 
+        for (var i = 0; i < 5; i++) {
+            setTimeout(function() {
+                console.log(i);
+            }, 1000);
+        }
+        console.log(i);
+ 
+        // output: 
+        // 5 5 5 5 5 5
+
+        // 2. 
+        var arr = [1, 2, 3, 5, 8, 8, 5, 13, 1, 2, 3]; 
+        var arr_filter = function(arr) {
+            var newArr = [];
+            for(var i = 0;i < arr.length;i++){
+                if(newArr.indexOf(arr[i]) == -1){
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        };
+
+        // 3. 
+        var flatten = function(arr) {
+            return arr.flat(Infinity);
+        }
+
+        var arr = [1,[2,3],[3,[4,5]]];
+        console.log(flatten(arr));
+
+        // 4. 
+        /**
+        * @param {string} s 
+        * @return {boolean}
+        */
+        var isValid = function(s) {
+            if(s==" "||s==""){
+                return true;
+            } 
+            let stack = [];
+            let left = ["{","(","["];
+            let right = ["}",")","]"];
+            for(let i =0;i<s.length;i++){ 
+                if(left.indexOf(s[i])>-1){
+                    stack.push(s[i]);
+                }else if(s[i] === " "){
+                    continue;
+                }else{
+                    if(stack.pop() != left[right.indexOf(s[i])] ){
+                        return false;
+                    }
+                }
+            }
+            if(stack.length!=0){
+                return false;
+            }
+            return true;
+        }
+        console.log("-isValid-");
+        console.log(isValid("[] () {} {} {] "));
+
+        // 5. 
+        /**
+        * @param {number[]} nums
+        * @param {number} target
+        * @return {number}
+        */
+        var threeSumClosest = function(nums, target) {
+            nums.sort();
+            var closeNum = nums[0] + nums[1] + nums[2];
+            for(var i = 0;i< nums.length-2; i++){
+                var j = i+1;
+                var k = nums.length -1;
+                while(j<k){
+                    var tmp = nums[i] + nums[j] + nums[k];
+                    if(Math.abs(tmp - target) < Math.abs(closeNum - target)){
+                        closeNum = tmp;
+                    }
+                    if(tmp < target){
+                        j++;
+                    }
+                    else if(tmp > target){
+                        k--;
+                    }
+                    else {
+                        return tmp;
+                    }
+                }
+            }
+            return closeNum;
+        }
+
+        var nums = [-3, 2, 4, -4], target = 1;
+        console.log(threeSumClosest(nums,target));
+    </script>
+</body>
+</html>
